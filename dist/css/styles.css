@@ -311,8 +311,44 @@ button {
   line-height: 1.4444444444;
 }
 
+.p-header__nav-item a {
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.p-header__nav-item a::after {
+  content: "";
+  position: absolute;
+  height: 0.1875rem;
+  width: 0;
+  background-color: #3A3838;
+  bottom: 0;
+  left: 50%;
+  -webkit-transition: width 0.3s, left 0.3s;
+  transition: width 0.3s, left 0.3s;
+}
+
+.p-header__nav-item a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 .p-header__nav-item + .p-header__nav-item {
   margin-top: 1.875rem;
+}
+
+.p-header__tel {
+  margin-top: 0.625rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.p-header__tel span {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  margin-right: 0.3em;
 }
 
 .p-test {

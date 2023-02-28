@@ -79,6 +79,39 @@
   line-height: calc(52 / 36);
 }
 
+.p-header__nav-item a {
+  display: inline-block;
+  padding-right: rem(16);
+  padding-left: rem(16);
+  position: relative;
+}
+.p-header__nav-item a::after {
+  content: "";
+  position: absolute;
+  height: rem(3);
+  width: 0;
+  background-color: $black;
+  bottom: 0;
+  left: 50%;
+  transition: width .3s, left .3s;
+}
+.p-header__nav-item a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 .p-header__nav-item + .p-header__nav-item {
   margin-top: rem(30);
+}
+
+.p-header__tel {
+  margin-top: rem(10);
+  font-size: rem(48);
+  font-weight: 700;
+}
+
+.p-header__tel span {
+  font-size: rem(36);
+  text-transform: uppercase;
+  margin-right: .3em;
 }
