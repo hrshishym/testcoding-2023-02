@@ -1,0 +1,342 @@
+@charset "UTF-8";
+html {
+  font-size: 90%;
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media (min-width: 1500px) {
+  html {
+    font-size: 150%;
+  }
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #3A3838;
+}
+
+@media screen and (min-width: 768px) {
+  a,
+  button {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  a:hover,
+  button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+/*****************************
+* A Modern CSS Reset (https://github.com/hankchizljaw/modern-css-reset)
+* 上記に、ul要素,ol要素,a要素への記述追加
+*****************************/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-color: initial;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* フッターエリア
+*/
+.l-footer {
+  margin-left: 6.25rem;
+}
+
+/* ヘッダーレイアウト
+*/
+.l-header {
+  width: 6.25rem;
+  height: 100svh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+
+.l-inner {
+  width: 100%;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .l-inner {
+    max-width: 1250px;
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
+}
+
+/* メインコンテンツエリア
+*/
+.l-main {
+  margin-left: 6.25rem;
+}
+
+/* ハンバーガーメニュー
+*/
+.c-hamburger {
+  position: relative;
+  z-index: 120;
+  width: 50%;
+}
+
+.c-hamburger__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.c-hamburger__line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #3a3838;
+}
+
+.c-hamburger__line {
+  margin-top: 0.9375rem;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.c-hamburger.active .c-hamburger__line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.c-hamburger.active .c-hamburger__line:nth-of-type(1) {
+  -webkit-transform: translateY(1.125rem) rotate(45deg);
+          transform: translateY(1.125rem) rotate(45deg);
+}
+
+.c-hamburger.active .c-hamburger__line:nth-of-type(3) {
+  -webkit-transform: translateY(-1.125rem) rotate(-45deg);
+          transform: translateY(-1.125rem) rotate(-45deg);
+}
+
+/* ヘッダー
+*/
+.p-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFD600;
+  /* contain: layout inline-size; */
+}
+
+.p-header__sns {
+  margin-top: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+@media (max-height: 600px) {
+  .p-header__sns:not(.p-header__sns--row) {
+    display: none;
+  }
+}
+.p-header__sns.p-header__sns--row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.p-header__icon {
+  display: block;
+}
+
+.p-header__icon i {
+  /* display: block; */
+  width: 70px;
+  height: auto;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  border: 3px solid #3A3838;
+  border-radius: 100%;
+}
+
+.p-header__icon i::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.p-header__nav {
+  position: fixed;
+  padding: 2rem;
+  padding-left: 8.25rem;
+  /* width: 100%; */
+  height: 100svh;
+  left: -100%;
+  top: 0;
+  background-color: #FFD600;
+  overflow-y: auto;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+  z-index: 110;
+}
+
+.p-header__nav.active {
+  left: 0px;
+}
+
+.p-header__nav-item {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.4444444444;
+}
+
+.p-header__nav-item + .p-header__nav-item {
+  margin-top: 1.875rem;
+}
+
+.p-test {
+  color: red;
+  font-size: 1.5625rem;
+}
+@media screen and (min-width: 768px) {
+  .p-test {
+    font-size: 3.125rem;
+  }
+}
+
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .u-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
