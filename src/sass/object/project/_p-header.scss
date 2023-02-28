@@ -39,25 +39,25 @@
 
 .p-header__icon i {
   /* display: block; */
-  width: 70px;
+  width: rem(70);
   height: auto;
   aspect-ratio: 1 / 1;
   background-color: $white;
-  border: 3px solid $black;
+  border: rem(3) solid $black;
   border-radius: 100%;
 }
 .p-header__icon i::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: rem(40);
   width: 100%;
   height: 100%;
 }
 
 .p-header__nav {
   position: fixed;
-  padding: 2rem;
+  padding: rem(32);
   padding-left: calc(#{rem(100)} + 2rem);
   /* width: 100%; */
   height: 100svh;
