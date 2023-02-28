@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -21,14 +22,61 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./css/font-awesome.all.min.css">
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script defer src="./js/script.js"></script>
 </head>
+
 <body>
-  <div class="l-inner">
-    <p class="p-test">cocomateだよ\(^o^)/</p>
-  </div>
+  <!-- ヘッダー -->
+  <header class="p-header l-header">
+    <!-- ハンバーガーメニュー -->
+    <a href="#" class="c-hamburger js-hamburger">
+      <span class="c-hamburger__title">menu</span>
+      <div class="c-hamburger__button">
+        <span class="c-hamburger__line"></span>
+        <span class="c-hamburger__line"></span>
+        <span class="c-hamburger__line"></span>
+      </div>
+    </a>
+    <!-- SNSアイコン -->
+    <div class="p-header__sns">
+      <a href="#" class="p-header__icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="p-header__icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="p-header__icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="p-header__icon"><i class="fab fa-youtube"></i></a>
+    </div>
+    <!-- ナビゲーション -->
+    <nav class="p-header__nav js-header-nav">
+      <ul class="p-header__nav-list">
+        <li class="p-header__nav-item"><a href="/">ホーム</a></li>
+        <li class="p-header__nav-item"><a href="#about">会社概要</a></li>
+        <li class="p-header__nav-item"><a href="#service">サービスについて</a></li>
+        <li class="p-header__nav-item"><a href="#news">お知らせ</a></li>
+        <li class="p-header__nav-item"><a href="#works">施工事例</a></li>
+        <li class="p-header__nav-item"><a href="#contact">お問い合わせ</a></li>
+      </ul>
+      <div class="p-header__sns p-header__sns--row">
+        <a href="#" class="p-header__icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="p-header__icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="p-header__icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="p-header__icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <div class="l-inner">
+      <p class="p-test">cocomateだよ\(^o^)/</p>
+    </div>
+  </main>
+
+  <footer class="l-footer p-footer">
+    foobar
+  </footer>
 </body>
+
 </html>
