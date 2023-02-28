@@ -1,26 +1,27 @@
 @use "global" as *;
 
 // インナー幅＋余白
-$breakpointInner: $innerWidth + strip-unit($padding-pc) * 2;
+$breakpointInner: $innerWidthMain + strip-unit($padding-pc) * 2;
 
 // ルートフォント設定
 html {
   // ~ 375px
   @media (max-width: 375px) {
-    font-size: vw(375, 16);
+    // font-size: vw(375, 16);
   }
 
   // 376px ~ 767px
-  font-size: 100%;
+  font-size: 90%;
 
   // 768px ~ インナー幅＋余白
   @include mq(md) {
-    font-size: vw(strip-unit($breakpointInner), 16);
+    // font-size: vw(strip-unit($breakpointFont), 16);
+    font-size: 100%;
   }
 
   // インナー幅＋余白 ~
-  @media ( min-width: $breakpointInner ) {
-    font-size: 100%;
+  @media ( min-width: $breakpointFont ) {
+    font-size: 150%;
   }
 }
 
