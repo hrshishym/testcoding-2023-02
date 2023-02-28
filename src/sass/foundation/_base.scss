@@ -7,7 +7,7 @@ $breakpointInner: $innerWidthMain + strip-unit($padding-pc) * 2;
 html {
   // ~ 375px
   @media (max-width: 375px) {
-    // font-size: vw(375, 16);
+    font-size: vw(375, 14.4);
   }
 
   // 376px ~ 767px

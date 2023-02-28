@@ -2,6 +2,11 @@
 html {
   font-size: 90%;
 }
+@media (max-width: 375px) {
+  html {
+    font-size: 3.84vw;
+  }
+}
 @media screen and (min-width: 768px) {
   html {
     font-size: 100%;
@@ -243,6 +248,8 @@ button {
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (max-height: 600px) {
@@ -288,21 +295,28 @@ button {
 
 .p-header__nav {
   position: fixed;
-  padding: 2rem;
-  padding-left: 8.25rem;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 6.25rem;
   /* width: 100%; */
   height: 100svh;
-  left: -100%;
+  left: 0;
   top: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   background-color: #FFD600;
   overflow-y: auto;
-  -webkit-transition: left 0.5s ease-in-out;
-  transition: left 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   z-index: 110;
 }
 
 .p-header__nav.active {
-  left: 0px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .p-header__nav-item {
@@ -313,8 +327,6 @@ button {
 
 .p-header__nav-item a {
   display: inline-block;
-  padding-right: 1rem;
-  padding-left: 1rem;
   position: relative;
 }
 
@@ -341,14 +353,24 @@ button {
 
 .p-header__tel {
   margin-top: 0.625rem;
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .p-header__tel {
+    font-size: 3rem;
+  }
 }
 
 .p-header__tel span {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   margin-right: 0.3em;
+}
+@media screen and (min-width: 768px) {
+  .p-header__tel span {
+    font-size: 2.25rem;
+  }
 }
 
 .p-test {
