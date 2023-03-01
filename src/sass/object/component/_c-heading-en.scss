@@ -1,0 +1,18 @@
+/* 見出し英語
+*/
+@use "global"as *;
+
+.c-heading-en {
+  position: absolute;
+  z-index: -1;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  font-family: $font-en;
+  font-size: rem(150);
+  font-weight: 700;
+  color: $color-heading-en;
+
+  & span {
+    color: $color-main;
+  }
+}

@@ -1,0 +1,67 @@
+/* サービスの丸
+
+* HTML
+
+<div class="p-service__item">
+  <div class="c-circle">
+    <img src="https://picsum.photos/800/600/" alt="">
+    <div class="c-circle__content">
+      <h3 class="c-circle__title">サンプル</h3>
+    </div>
+  </div>
+</div>
+
+*/
+@use "global"as *;
+
+.c-circle {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color-main;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  &__content:hover {
+    opacity: 1;
+  }
+
+  &__title {
+    position: relative;
+    font-size: rem(48);
+    font-weight: 700;
+    color: $black;
+    line-height: calc(56 / 48);
+    padding-bottom: rem(25);
+  }
+
+  &__title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: rem(100);
+    height: 3px;
+    background-color: $black;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}  

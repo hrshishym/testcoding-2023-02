@@ -1,0 +1,64 @@
+/* ニュース記事タイトル
+
+<div class="c-news">
+  <div class="c-news__meta">
+    <span class="c-news__category">お知らせ</span>
+    <span class="c-news__post">posted on</span>
+    <time class="c-news__date" datetime="2023-02-14">2023.02.14</time>
+  </div>
+  <h3 class="c-news__title"><a href="#">バレンタインデーにチョコのお家を作りました！</a></h3>
+</div>
+
+*/
+@use "global"as *;
+
+.c-news {
+  display: flex;
+  flex-direction: column-reverse;
+  border-bottom: 1px solid #000;
+
+  &__meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__category {
+    color: $white;
+    font-size: rem(16);
+    font-weight: 700;
+    background-color: $color-main;
+    
+    a {
+      display: inline-block;
+      padding: rem(5) rem(10);
+    }
+  }
+
+  &__post {
+    margin-left: rem(20);
+    font-family: $font-en;
+    font-size: rem(19.2);
+    font-weight: 700;
+    color: $color-news-posted;
+  }
+
+  &__date {
+    margin-left: rem(14);
+    font-family: $font-en;
+    font-size: rem(19.2);
+    font-weight: 700;
+    color: $color-main;
+  }
+
+  &__title {
+    font-size: rem(24);
+    font-weight: 700;
+    
+    a {
+      display: block;
+      padding-top: rem(15);
+      padding-bottom: rem(15);
+    }
+  }
+}

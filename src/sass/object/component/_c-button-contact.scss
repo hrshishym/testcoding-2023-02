@@ -1,0 +1,14 @@
+/* お問い合わせボタン
+*/
+@use "global"as *;
+
+.c-button-contact {
+  display: inline-block;
+  width: 100%;
+  padding: rem(20);
+  font-size: rem(24);
+  font-weight: 700;
+  color: $white;
+  border: 2px solid $white;
+  text-align: center;
+}

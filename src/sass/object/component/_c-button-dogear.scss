@@ -1,0 +1,48 @@
+/* 耳付きボタン
+
+* HTML
+
+<div class="p-foobar__button">
+  <a href="#" class="c-button-dogear">read more</a>
+</div>
+
+* Note
+
+このクラスには幅を指定していない(100%)ため、
+外側をdivでくくって幅を指定する。
+
+*/
+@use "global"as *;
+
+.c-button-dogear {
+  display: inline-block;
+  text-transform: capitalize;
+  // min-width: 500px;
+  width: 100%;
+  background-color: $black;
+  color: white;
+  font-weight: bold;
+  padding: rem(20);
+  text-align: center;
+  position: relative;
+  transition: background-color .3s, color .3s;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: auto;
+    height: 70%;
+    aspect-ratio: 1 / 1;
+    border-width: rem(16);
+    background-color: $color-main;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 0 0);
+  }
+
+  &:hover {
+    background-color: $color-main;
+    color: $black;
+  }
+}

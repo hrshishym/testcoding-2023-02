@@ -21,6 +21,7 @@ html {
 body {
   font-family: "Noto Sans JP", sans-serif;
   color: #3A3838;
+  line-height: 1.45;
 }
 
 @media screen and (min-width: 768px) {
@@ -64,6 +65,15 @@ li {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul,
 ol {
@@ -80,7 +90,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 /* A elements that don't have a class get default styles */
@@ -97,6 +107,7 @@ a {
 img,
 picture {
   max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -135,41 +146,170 @@ button {
 /* フッターエリア
 */
 .l-footer {
-  margin-left: 6.25rem;
+  margin-left: 4.1666666667rem;
 }
 
 /* ヘッダーレイアウト
 */
 .l-header {
-  width: 6.25rem;
+  width: 4.1666666667rem;
   height: 100svh;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
+  padding-top: 2.0833333333rem;
+  padding-bottom: 2.0833333333rem;
 }
 
 .l-inner {
   width: 100%;
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  padding-right: 0.8333333333rem;
+  padding-left: 0.8333333333rem;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .l-inner {
     max-width: 1250px;
-    padding-right: 1.5625rem;
-    padding-left: 1.5625rem;
+    padding-right: 1.0416666667rem;
+    padding-left: 1.0416666667rem;
   }
 }
 
 /* メインコンテンツエリア
 */
 .l-main {
-  margin-left: 6.25rem;
+  margin-left: 4.1666666667rem;
+}
+
+/* お問い合わせボタン
+*/
+.c-button-contact {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8333333333rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+}
+
+/* 耳付きボタン
+
+* HTML
+
+<div class="p-foobar__button">
+  <a href="#" class="c-button-dogear">read more</a>
+</div>
+
+* Note
+
+このクラスには幅を指定していない(100%)ため、
+外側をdivでくくって幅を指定する。
+
+*/
+.c-button-dogear {
+  display: inline-block;
+  text-transform: capitalize;
+  width: 100%;
+  background-color: #3A3838;
+  color: white;
+  font-weight: bold;
+  padding: 0.8333333333rem;
+  text-align: center;
+  position: relative;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+.c-button-dogear::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: auto;
+  height: 70%;
+  aspect-ratio: 1/1;
+  border-width: 0.6666666667rem;
+  background-color: #FFD600;
+  bottom: 0;
+  left: 0;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 0 0);
+          clip-path: polygon(0 0, 0 100%, 100% 100%, 0 0);
+}
+.c-button-dogear:hover {
+  background-color: #FFD600;
+  color: #3A3838;
+}
+
+/* サービスの丸
+
+* HTML
+
+<div class="p-service__item">
+  <div class="c-circle">
+    <img src="https://picsum.photos/800/600/" alt="">
+    <div class="c-circle__content">
+      <h3 class="c-circle__title">サンプル</h3>
+    </div>
+  </div>
+</div>
+
+*/
+.c-circle {
+  position: relative;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.c-circle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.c-circle__content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #FFD600;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.c-circle__content:hover {
+  opacity: 1;
+}
+.c-circle__title {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3A3838;
+  line-height: 1.1666666667;
+  padding-bottom: 1.0416666667rem;
+}
+.c-circle__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4.1666666667rem;
+  height: 3px;
+  background-color: #3A3838;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /* ハンバーガーメニュー
@@ -182,6 +322,7 @@ button {
 
 .c-hamburger__title {
   text-transform: uppercase;
+  font-size: 0.6666666667rem;
   font-weight: bold;
   line-height: 1;
 }
@@ -194,7 +335,7 @@ button {
 }
 
 .c-hamburger__line {
-  margin-top: 0.9375rem;
+  margin-top: 0.625rem;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
@@ -206,13 +347,127 @@ button {
 }
 
 .c-hamburger.active .c-hamburger__line:nth-of-type(1) {
-  -webkit-transform: translateY(1.125rem) rotate(45deg);
-          transform: translateY(1.125rem) rotate(45deg);
+  -webkit-transform: translateY(0.75rem) rotate(45deg);
+          transform: translateY(0.75rem) rotate(45deg);
 }
 
 .c-hamburger.active .c-hamburger__line:nth-of-type(3) {
-  -webkit-transform: translateY(-1.125rem) rotate(-45deg);
-          transform: translateY(-1.125rem) rotate(-45deg);
+  -webkit-transform: translateY(-0.75rem) rotate(-45deg);
+          transform: translateY(-0.75rem) rotate(-45deg);
+}
+
+/* 見出し英語
+*/
+.c-heading-en {
+  position: absolute;
+  z-index: -1;
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-family: "Raleway", sans-serif;
+  font-size: 6.25rem;
+  font-weight: 700;
+  color: #E8E8E8;
+}
+.c-heading-en span {
+  color: #FFD600;
+}
+
+/* セクションタイトル
+*/
+.c-heading {
+  font-size: 2.9166666667rem;
+  font-weight: 700;
+  color: #FFD600;
+}
+
+/* 影付きの画像
+*/
+.c-image-shadow {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="0" /><feOffset dx="33" dy="33" result="offsetblur" /><feFlood flood-color="rgba(255,214,0,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(1.975rem 2.0833333333rem 0 #FFD600);
+          filter: drop-shadow(1.975rem 2.0833333333rem 0 #FFD600);
+}
+
+/* ニュース記事タイトル
+
+<div class="c-news">
+  <div class="c-news__meta">
+    <span class="c-news__category">お知らせ</span>
+    <span class="c-news__post">posted on</span>
+    <time class="c-news__date" datetime="2023-02-14">2023.02.14</time>
+  </div>
+  <h3 class="c-news__title"><a href="#">バレンタインデーにチョコのお家を作りました！</a></h3>
+</div>
+
+*/
+.c-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  border-bottom: 1px solid #000;
+}
+.c-news__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-news__category {
+  color: #fff;
+  font-size: 0.6666666667rem;
+  font-weight: 700;
+  background-color: #FFD600;
+}
+.c-news__category a {
+  display: inline-block;
+  padding: 0.2083333333rem 0.4166666667rem;
+}
+.c-news__post {
+  margin-left: 0.8333333333rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #C5C0C0;
+}
+.c-news__date {
+  margin-left: 0.5833333333rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #FFD600;
+}
+.c-news__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.c-news__title a {
+  display: block;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+/* タグ
+*/
+.c-tag {
+  display: inline-block;
+  padding: 0.2083333333rem 1.0416666667rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #3A3838;
+  border-radius: 4.1666666667rem;
 }
 
 /* ヘッダー
@@ -236,7 +491,7 @@ button {
 }
 
 .p-header__sns {
-  margin-top: 1.875rem;
+  margin-top: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,11 +525,11 @@ button {
 
 .p-header__icon i {
   /* display: block; */
-  width: 4.375rem;
+  width: 2.9166666667rem;
   height: auto;
   aspect-ratio: 1/1;
   background-color: #fff;
-  border: 0.1875rem solid #3A3838;
+  border: 0.125rem solid #3A3838;
   border-radius: 100%;
 }
 
@@ -288,17 +543,17 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2.5rem;
+  font-size: 1.6666666667rem;
   width: 100%;
   height: 100%;
 }
 
 .p-header__nav {
   position: fixed;
-  padding-top: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 6.25rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4.1666666667rem;
   /* width: 100%; */
   height: 100svh;
   left: 0;
@@ -320,7 +575,7 @@ button {
 }
 
 .p-header__nav-item {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.4444444444;
 }
@@ -333,7 +588,7 @@ button {
 .p-header__nav-item a::after {
   content: "";
   position: absolute;
-  height: 0.1875rem;
+  height: 0.125rem;
   width: 0;
   background-color: #3A3838;
   bottom: 0;
@@ -348,38 +603,38 @@ button {
 }
 
 .p-header__nav-item + .p-header__nav-item {
-  margin-top: 1.875rem;
+  margin-top: 1.25rem;
 }
 
 .p-header__tel {
-  margin-top: 0.625rem;
-  font-size: 2.25rem;
+  margin-top: 0.4166666667rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .p-header__tel {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 .p-header__tel span {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
   margin-right: 0.3em;
 }
 @media screen and (min-width: 768px) {
   .p-header__tel span {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 }
 
 .p-test {
   color: red;
-  font-size: 1.5625rem;
+  font-size: 1.0416666667rem;
 }
 @media screen and (min-width: 768px) {
   .p-test {
-    font-size: 3.125rem;
+    font-size: 2.0833333333rem;
   }
 }
 

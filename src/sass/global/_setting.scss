@@ -14,12 +14,15 @@ $margin-left: 100px;
 
 // フォント
 $font-main: 'Noto Sans JP', sans-serif;
+$font-en: 'Raleway', sans-serif;
 
 // 色指定
 $black: #3A3838;
 $white: #fff;
 $color-main: #FFD600;
 $color-accent: #C5C0C0;
+$color-heading-en: #E8E8E8;
+$color-news-posted: $color-accent;
 
 // ブレイクポイント
 $breakpoints: (

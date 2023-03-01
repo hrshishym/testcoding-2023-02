@@ -1,0 +1,13 @@
+/* タグ
+*/
+@use "global"as *;
+
+.c-tag {
+  display: inline-block;
+  padding: rem(5) rem(25);
+  font-size: rem(19.2);
+  font-weight: 700;
+  color: $white;
+  background-color: $black;
+  border-radius: rem(100);
+}
