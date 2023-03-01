@@ -8,6 +8,21 @@
   margin-left: auto;
   @include mq(md) {
     max-width: $innerWidthMain + $padding-pc * 2;
+    // padding-right: rem(strip-unit($padding-pc));
+    // padding-left: rem(strip-unit($padding-pc));
+    padding-right: rem(strip-unit($padding-pc + $innerWidthSub - $innerWidthMain));
+    padding-left: rem(strip-unit($padding-pc + $innerWidthSub - $innerWidthMain));
+  }
+}
+
+.l-inner-sub {
+  width: 100%;
+  padding-right: rem(strip-unit($padding-sp));
+  padding-left: rem(strip-unit($padding-sp));
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    max-width: $innerWidthSub + $padding-pc * 2;
     padding-right: rem(strip-unit($padding-pc));
     padding-left: rem(strip-unit($padding-pc));
   }

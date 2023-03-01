@@ -1,0 +1,31 @@
+/* セクション：お問い合わせ
+*/
+@use "global"as *;
+
+.p-contact {
+  background-image: linear-gradient(rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .5) 100%), url(../images/img-contact-bg.jpg);
+  background-size: cover;
+  background-position: center;
+
+  &__heading {
+    font-size: rem(70);
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+  }
+
+  &__message {
+    margin-top: rem(50);
+    font-size: rem(24);
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+  }
+
+  &__buttons {
+    margin-top: rem(50);
+    display: flex;
+    flex-direction: row;
+    column-gap: rem(100);
+  }
+}

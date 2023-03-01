@@ -143,6 +143,13 @@ button {
     scroll-behavior: auto !important;
   }
 }
+/* レイアウト：お問い合わせ
+*/
+.l-contact {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
 /* フッターエリア
 */
 .l-footer {
@@ -172,6 +179,21 @@ button {
 @media screen and (min-width: 768px) {
   .l-inner {
     max-width: 1250px;
+    padding-right: 9.375rem;
+    padding-left: 9.375rem;
+  }
+}
+
+.l-inner-sub {
+  width: 100%;
+  padding-right: 0.8333333333rem;
+  padding-left: 0.8333333333rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .l-inner-sub {
+    max-width: 1450px;
     padding-right: 1.0416666667rem;
     padding-left: 1.0416666667rem;
   }
@@ -194,6 +216,14 @@ button {
   color: #fff;
   border: 2px solid #fff;
   text-align: center;
+  -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.c-button-contact:hover {
+  color: #3A3838;
+  background-color: #FFD600;
+  border-color: #FFD600;
+  opacity: 1;
 }
 
 /* 耳付きボタン
@@ -565,6 +595,41 @@ button {
   border-radius: 4.1666666667rem;
 }
 
+/* セクション：お問い合わせ
+*/
+.p-contact {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .5))), url(../images/img-contact-bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .5) 100%), url(../images/img-contact-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.p-contact__heading {
+  font-size: 2.9166666667rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.p-contact__message {
+  margin-top: 2.0833333333rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.p-contact__buttons {
+  margin-top: 2.0833333333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 4.1666666667rem;
+     -moz-column-gap: 4.1666666667rem;
+          column-gap: 4.1666666667rem;
+}
+
 /* ヘッダー
 */
 .p-header {
@@ -720,16 +785,6 @@ button {
 @media screen and (min-width: 768px) {
   .p-header__tel span {
     font-size: 1.5rem;
-  }
-}
-
-.p-test {
-  color: red;
-  font-size: 1.0416666667rem;
-}
-@media screen and (min-width: 768px) {
-  .p-test {
-    font-size: 2.0833333333rem;
   }
 }
 
