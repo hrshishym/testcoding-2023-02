@@ -1,0 +1,96 @@
+/* スライド
+
+* HTML
+
+  <div class="c-slide">
+    <div class="c-slide__content">
+      <span class="c-slide__label">注文住宅</span>
+      <div class="c-slide__address">千葉県千葉市花見川区</div>
+      <h3 class="c-slide__title">2階建てプール付き注文住宅</h3>
+      <div class="c-slide__link">
+        <a href="#">Read more</a>
+      </div>
+    </div>
+    <div class="c-slide__image"><img src="https://picsum.photos/800/600/" alt=""></div>
+  </div>
+
+*/
+@use "global"as *;
+
+.c-slide {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  align-items: end;
+
+  &__content {
+    width: 50%;
+    padding-top: rem(127);
+    padding-right: rem(50);
+    padding-bottom: rem(40);
+    padding-left: rem(57);
+    background-color: rgba($color-main, .7);
+  }
+
+  &__label {
+    padding: rem(5) rem(25);
+    font-size: rem(19.2);
+    font-weight: 700;
+    color: $white;
+    background-color: $black;
+  }
+
+  &__address {
+    margin-top: rem(7);
+    font-size: rem(20);
+    font-weight: 400;
+  }
+
+  &__title {
+    font-size: rem(36);
+    font-weight: 700;
+    padding-bottom: rem(20);
+    position: relative;
+  }
+
+  &__title::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 3px;
+    width: rem(250);
+    left: 0;
+    bottom: 0;
+    background-color: $black;
+  }
+
+  &__link {
+    margin-top: rem(47);
+    text-align: right;
+
+    a {
+      padding-top: rem(10);
+      padding-right: rem(40);
+      padding-bottom: rem(10);
+      padding-left: rem(20);
+      text-transform: capitalize;
+      font-family: $font-en;
+      font-size: rem(19.2);
+      font-weight: 700;
+      position: relative;
+    }
+    a::after {
+      position: absolute;
+      content: ">";
+      display: block;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__image {
+    width: 66.666%;
+    margin-right: -16.666%;
+  }
+}

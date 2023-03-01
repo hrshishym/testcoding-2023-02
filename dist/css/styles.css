@@ -458,6 +458,101 @@ button {
   padding-bottom: 0.625rem;
 }
 
+/* スライド
+
+* HTML
+
+  <div class="c-slide">
+    <div class="c-slide__content">
+      <span class="c-slide__label">注文住宅</span>
+      <div class="c-slide__address">千葉県千葉市花見川区</div>
+      <h3 class="c-slide__title">2階建てプール付き注文住宅</h3>
+      <div class="c-slide__link">
+        <a href="#">Read more</a>
+      </div>
+    </div>
+    <div class="c-slide__image"><img src="https://picsum.photos/800/600/" alt=""></div>
+  </div>
+
+*/
+.c-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.c-slide__content {
+  width: 50%;
+  padding-top: 5.2916666667rem;
+  padding-right: 2.0833333333rem;
+  padding-bottom: 1.6666666667rem;
+  padding-left: 2.375rem;
+  background-color: rgba(255, 214, 0, .7);
+}
+.c-slide__label {
+  padding: 0.2083333333rem 1.0416666667rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #3A3838;
+}
+.c-slide__address {
+  margin-top: 0.2916666667rem;
+  font-size: 0.8333333333rem;
+  font-weight: 400;
+}
+.c-slide__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 0.8333333333rem;
+  position: relative;
+}
+.c-slide__title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 10.4166666667rem;
+  left: 0;
+  bottom: 0;
+  background-color: #3A3838;
+}
+.c-slide__link {
+  margin-top: 1.9583333333rem;
+  text-align: right;
+}
+.c-slide__link a {
+  padding-top: 0.4166666667rem;
+  padding-right: 1.6666666667rem;
+  padding-bottom: 0.4166666667rem;
+  padding-left: 0.8333333333rem;
+  text-transform: capitalize;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  position: relative;
+}
+.c-slide__link a::after {
+  position: absolute;
+  content: ">";
+  display: block;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.c-slide__image {
+  width: 66.666%;
+  margin-right: -16.666%;
+}
+
 /* タグ
 */
 .c-tag {
