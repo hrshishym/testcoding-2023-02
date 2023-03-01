@@ -2,8 +2,9 @@
 
 // pxからremへの計算式
 // 例：rem(32) → 2rem
+// デザインカンプはルートフォント=150%での値のため 16*1.5 で割る
 @function rem($pixels) {
-  @return math.div($pixels, 16) * 1rem;
+  @return math.div($pixels, 16 * 1.5) * 1rem;
 }
 
 // 数値のみを取り出す 
