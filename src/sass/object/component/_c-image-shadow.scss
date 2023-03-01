@@ -1,0 +1,7 @@
+/* 影付きの画像
+*/
+@use "global"as *;
+
+.c-image-shadow {
+  filter:drop-shadow(rem(47.4) rem(50) 0 $color-main);
+}
