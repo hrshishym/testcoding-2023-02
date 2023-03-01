@@ -1,0 +1,9 @@
+/* セクションタイトル
+*/
+@use "global"as *;
+
+.c-heading {
+  font-size: rem(70);
+  font-weight: 700;
+  color: $color-main;
+}
