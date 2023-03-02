@@ -1,0 +1,12 @@
+/* セクション：Main View(MV)
+*/
+@use "global"as *;
+
+.l-mv {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: rem(120);
+  padding-right: rem(50);
+  padding-bottom: rem(120);
+  padding-left: rem(50);
+}
