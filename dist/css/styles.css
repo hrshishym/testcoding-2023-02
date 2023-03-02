@@ -398,8 +398,7 @@ button {
 */
 .c-hamburger {
   position: relative;
-  z-index: 120;
-  width: 50%;
+  line-height: 1;
 }
 
 .c-hamburger__title {
@@ -945,6 +944,11 @@ button {
   /* contain: layout inline-size; */
 }
 
+.p-header__hamburger {
+  z-index: 120;
+  width: 50%;
+}
+
 .p-header__sns {
   margin-top: 1.25rem;
   display: -webkit-box;
@@ -1006,7 +1010,7 @@ button {
 .p-header__nav {
   position: fixed;
   padding-top: 1rem;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 4.1666666667rem;
   /* width: 100%; */

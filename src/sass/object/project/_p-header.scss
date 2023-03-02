@@ -11,6 +11,11 @@
   /* contain: layout inline-size; */
 }
 
+.p-header__hamburger {
+  z-index: 120;
+  width: 50%;
+}
+
 .p-header__sns {
   margin-top: rem(30);
   display: flex;
@@ -61,7 +66,7 @@
 .p-header__nav {
   position: fixed;
   padding-top: rem(24);
-  padding-right: rem(24);
+  padding-right: rem(36);
   padding-bottom: rem(24);
   padding-left: rem(100);
   /* width: 100%; */
