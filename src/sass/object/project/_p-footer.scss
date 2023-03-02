@@ -1,0 +1,54 @@
+/* フッター
+*/
+@use "global"as *;
+
+.p-footer {
+  background-color: $black;
+  color: $white;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__heading {
+    font-size: rem(50);
+    font-weight: 700;
+  }
+
+  &__zip {
+    display: block;
+    margin-top: rem(30);
+    font-size: rem(24);
+    font-weight: 700;
+  }
+
+  &__address {
+    font-size: rem(28);
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  &__tel-area {
+    margin-top: rem(10);
+  }
+
+  &__tel {
+    font-size: rem(36);
+    font-weight: 700;
+
+    span {
+      margin-right: rem(8);
+      font-size: rem(24);
+      text-transform: uppercase;
+    }
+  }
+
+  &__separate {
+    margin-right: rem(16);
+    margin-left: rem(16);
+    font-size: rem(32);
+  }
+}

@@ -167,6 +167,8 @@ button {
 */
 .l-footer {
   margin-left: 4.1666666667rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 /* ヘッダーレイアウト
@@ -847,6 +849,60 @@ button {
   -webkit-column-gap: 4.1666666667rem;
      -moz-column-gap: 4.1666666667rem;
           column-gap: 4.1666666667rem;
+}
+
+/* フッター
+*/
+.p-footer {
+  background-color: #3A3838;
+  color: #fff;
+}
+.p-footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.p-footer__heading {
+  font-size: 2.0833333333rem;
+  font-weight: 700;
+}
+.p-footer__zip {
+  display: block;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.p-footer__address {
+  font-size: 1.1666666667rem;
+  font-weight: 700;
+  font-style: normal;
+}
+.p-footer__tel-area {
+  margin-top: 0.4166666667rem;
+}
+.p-footer__tel {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.p-footer__tel span {
+  margin-right: 0.3333333333rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.p-footer__separate {
+  margin-right: 0.6666666667rem;
+  margin-left: 0.6666666667rem;
+  font-size: 1.3333333333rem;
 }
 
 /* ヘッダー
