@@ -3,26 +3,27 @@
 @use "global"as *;
 
 .p-access {
-  position: relative;
+  position  : relative;
   overflow-x: hidden;
   overflow-y: hidden;
 
   &__heading-en {
-    top: rem(111);
-    left: 100%;
+    top : rem(111);
+    left: calc(100% - #{rem(50)});
+    ;
   }
 
   &__map {
-    width: 100%;
-    position: relative;
+    width      : 100%;
+    position   : relative;
     padding-top: 44%;
-    
+
     iframe {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top     : 0;
+      left    : 0;
+      width   : 100%;
+      height  : 100%;
     }
   }
 }

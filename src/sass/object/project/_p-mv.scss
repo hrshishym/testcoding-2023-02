@@ -3,45 +3,51 @@
 @use "global"as *;
 
 .p-mv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, .4) 0%), url(../images/img-mainview-bg.jpg);
-  background-size: cover;
+  display            : flex;
+  flex-direction     : column;
+  justify-content    : center;
+  align-items        : center;
+  background-image   : linear-gradient(rgba(0, 0, 0, .4) 0%), url(../images/img-mainview-bg.jpg);
+  background-size    : cover;
   background-position: center;
 
   &__heading-sub {
-    font-family: $font-en;
-    font-size: rem(75);
-    font-weight: 700;
-    color: $color-main;
+    font-family   : $font-en;
+    font-size     : rem(75);
+    font-weight   : 700;
+    color         : $color-main;
     text-transform: uppercase;
+    text-align    : center;
+    line-height   : calc(88 / 75);
   }
 
   &__heading {
     padding-bottom: rem(50);
-    font-family: $font-en;
-    font-size: rem(160);
-    font-weight: 700;
-    color: $white;
+    font-family   : $font-en;
+    font-size     : rem(160);
+    font-weight   : 700;
+    color         : $white;
     text-transform: uppercase;
-    position: relative;
+    text-align    : center;
+    position      : relative;
+    line-height   : calc(188 / 160);
   }
+
   &__heading::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: rem(5);
+    content         : "";
+    position        : absolute;
+    width           : 100%;
+    height          : rem(5);
     background-color: $white;
-    bottom: 0;
-    left: 0;
+    bottom          : 0;
+    left            : 0;
   }
 
   &__message {
-    margin-top: rem(70);
-    font-size: rem(40);
+    margin-top : rem(70);
+    font-size  : rem(40);
     font-weight: 700;
-    color: $white;
+    color      : $white;
+    text-align : center;
   }
 }

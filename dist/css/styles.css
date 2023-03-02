@@ -296,6 +296,7 @@ button {
   font-weight: bold;
   padding: 0.8333333333rem;
   text-align: center;
+  line-height: 1.1666666667;
   position: relative;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
@@ -594,7 +595,7 @@ button {
   padding-top: 5.2916666667rem;
   padding-top: clamp(1.3333333333rem, -2.8195833333rem + 12.97814vw, 5.2916666667rem);
   padding-right: 2.0833333333rem;
-  padding-bottom: 1.6666666667rem;
+  padding-bottom: 2.0833333333rem;
   padding-left: 2.375rem;
   background-color: rgba(255, 214, 0, .7);
 }
@@ -632,7 +633,7 @@ button {
 }
 .c-slide__link a {
   padding-top: 0.4166666667rem;
-  padding-right: 1.6666666667rem;
+  padding-right: 1.3333333333rem;
   padding-bottom: 0.4166666667rem;
   padding-left: 0.8333333333rem;
   text-transform: capitalize;
@@ -681,7 +682,7 @@ button {
 }
 .p-access__heading-en {
   top: 4.625rem;
-  left: 100%;
+  left: calc(100% - 2.08333rem);
 }
 .p-access__map {
   width: 100%;
@@ -706,7 +707,7 @@ button {
   background-repeat: repeat;
 }
 .p-concept__heading-en {
-  left: 100%;
+  left: calc(100% - 2.08333rem);
 }
 .p-concept__message {
   margin-top: 2.0833333333rem;
@@ -719,6 +720,7 @@ button {
 .p-concept__message--large {
   display: block;
   font-size: 1.3333333333rem;
+  line-height: 1.75;
 }
 .p-concept__image {
   margin-left: auto;
@@ -746,7 +748,7 @@ button {
           clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 calc(100% - 10vw));
 }
 .p-construction__heading-en {
-  right: 100%;
+  right: calc(100% - 2.08333rem);
 }
 .p-construction__tags {
   margin-top: 2.0833333333rem;
@@ -783,6 +785,13 @@ button {
   cursor: pointer;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+.p-construction__slide-thumbs img {
+  aspect-ratio: 262.5/200;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .p-construction .swiper-thumbs-button-next,
 .p-construction .swiper-thumbs-button-prev {
@@ -911,8 +920,8 @@ button {
   text-transform: uppercase;
 }
 .p-footer__separate {
-  margin-right: 0.6666666667rem;
-  margin-left: 0.6666666667rem;
+  margin-right: 1.25rem;
+  margin-left: 0.9166666667rem;
   font-size: 1.3333333333rem;
 }
 
@@ -1101,6 +1110,8 @@ button {
   font-weight: 700;
   color: #FFD600;
   text-transform: uppercase;
+  text-align: center;
+  line-height: 1.1733333333;
 }
 .p-mv__heading {
   padding-bottom: 2.0833333333rem;
@@ -1109,7 +1120,9 @@ button {
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
   position: relative;
+  line-height: 1.175;
 }
 .p-mv__heading::after {
   content: "";
@@ -1125,6 +1138,7 @@ button {
   font-size: 1.6666666667rem;
   font-weight: 700;
   color: #fff;
+  text-align: center;
 }
 
 /* セクション：お知らせ
@@ -1135,7 +1149,7 @@ button {
   z-index: 0;
 }
 .p-news__heading-en {
-  left: 100%;
+  left: calc(100% - 2.08333rem);
 }
 .p-news__list {
   margin-top: 2.0833333333rem;
@@ -1164,7 +1178,7 @@ button {
   background-color: #FFFBE6;
 }
 .p-service .p-service__heading-en {
-  right: 100%;
+  right: calc(100% - 2.08333rem);
 }
 .p-service__list {
   margin-top: 2.0833333333rem;

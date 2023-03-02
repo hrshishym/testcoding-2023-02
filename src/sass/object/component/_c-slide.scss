@@ -28,7 +28,7 @@
     padding-top: rem(127);
     padding-top: clamp(#{rem(32)}, #{rem(-67.67)} + 12.97814vw, #{rem(127)}); // From 32px@768px To 127@1500px
     padding-right: rem(50);
-    padding-bottom: rem(40);
+    padding-bottom: rem(50);
     padding-left: rem(57);
     background-color: rgba($color-main, .7);
   }
@@ -71,7 +71,7 @@
 
     a {
       padding-top: rem(10);
-      padding-right: rem(40);
+      padding-right: rem(32);
       padding-bottom: rem(10);
       padding-left: rem(20);
       text-transform: capitalize;

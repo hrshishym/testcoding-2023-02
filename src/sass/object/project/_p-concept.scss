@@ -4,13 +4,13 @@
 
 .p-concept {
   position         : relative;
-  overflow-x: hidden;
+  overflow-x       : hidden;
   z-index          : 0;
   background-image : url(../images/img-concept-bg.png);
   background-repeat: repeat;
 
   &__heading-en {
-    left: 100%;
+    left: calc(100% - #{rem(50)});
   }
 
   &__message {
@@ -24,8 +24,9 @@
   }
 
   &__message--large {
-    display  : block;
-    font-size: rem(32);
+    display    : block;
+    font-size  : rem(32);
+    line-height: calc(56/32);
   }
 
   &__image {
