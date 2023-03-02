@@ -26,6 +26,7 @@
   &__content {
     width: 50%;
     padding-top: rem(127);
+    padding-top: clamp(#{rem(32)}, #{rem(-67.67)} + 12.97814vw, #{rem(127)}); // From 32px@768px To 127@1500px
     padding-right: rem(50);
     padding-bottom: rem(40);
     padding-left: rem(57);
@@ -92,5 +93,10 @@
   &__image {
     width: 66.666%;
     margin-right: -16.666%;
+
+    img {
+      object-fit: cover;
+      aspect-ratio: 800 / 500;
+    }
   }
 }

@@ -150,6 +150,12 @@ button {
   padding-bottom: 5rem;
 }
 
+/* レイアウト：施工事例
+*/
+.l-construction {
+  padding-bottom: 5rem;
+}
+
 /* レイアウト：お問い合わせ
 */
 .l-contact {
@@ -568,6 +574,7 @@ button {
 .c-slide__content {
   width: 50%;
   padding-top: 5.2916666667rem;
+  padding-top: clamp(1.3333333333rem, -2.8195833333rem + 12.97814vw, 5.2916666667rem);
   padding-right: 2.0833333333rem;
   padding-bottom: 1.6666666667rem;
   padding-left: 2.375rem;
@@ -629,6 +636,11 @@ button {
   width: 66.666%;
   margin-right: -16.666%;
 }
+.c-slide__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 800/500;
+}
 
 /* タグ
 */
@@ -670,6 +682,107 @@ button {
   margin-left: auto;
   margin-top: 3.125rem;
   width: 72%;
+}
+
+/* セクション：施工事例
+*/
+.p-construction {
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+}
+.p-construction::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 36.25rem;
+  width: 100%;
+  background-color: #FFFBE6;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 calc(100% - 10vw));
+          clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 calc(100% - 10vw));
+}
+.p-construction__heading-en {
+  right: 100%;
+}
+.p-construction__tags {
+  margin-top: 2.0833333333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 0.8333333333rem;
+     -moz-column-gap: 0.8333333333rem;
+          column-gap: 0.8333333333rem;
+  row-gap: 0.8333333333rem;
+}
+.p-construction__swiper {
+  margin-top: 2.0833333333rem;
+  position: relative;
+}
+.p-construction__swiper .swiper-slide {
+  background-color: #fff;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+.p-construction__swiper-thumbs {
+  margin-top: 2.0833333333rem;
+  position: relative;
+}
+.p-construction__swiper-thumbs .swiper-slide {
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.p-construction .swiper-thumbs-button-next,
+.p-construction .swiper-thumbs-button-prev {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  top: 40%;
+  height: 30px;
+  width: 30px;
+  background-color: #FFD600;
+  border-radius: 100px;
+  cursor: pointer;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="8" /><feOffset dx="1" dy="1" result="offsetblur" /><feFlood flood-color="rgba(255,255,255,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(0 0 8px rgba(255, 255, 255, .7));
+          filter: drop-shadow(0 0 8px rgba(255, 255, 255, .7));
+}
+.p-construction .swiper-thumbs-button-next,
+.p-construction .swiper-thumbs-button-prev {
+  display: none;
+}
+.p-construction .swiper-thumbs-button-next {
+  right: 0.4166666667rem;
+}
+.p-construction .swiper-thumbs-button-prev {
+  left: 0.4166666667rem;
+}
+.p-construction .swiper-slide-thumb-active {
+  opacity: 0.7;
+}
+.p-construction__button {
+  margin-top: 3.125rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 20.8333333333rem;
 }
 
 /* セクション：お問い合わせ

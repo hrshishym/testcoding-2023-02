@@ -1,0 +1,94 @@
+/* セクション：施工事例
+*/
+@use "global"as *;
+
+.p-construction {
+  position         : relative;
+  overflow-x: hidden;
+  z-index          : 0;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: rem(870);
+    width: 100%;
+    background-color: #FFFBE6;
+    z-index: -1;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 calc(100% - 10vw));
+  }
+
+  &__heading-en {
+    right: 100%;
+  }
+
+  &__tags {
+    margin-top: rem(50);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: rem(20);
+    row-gap: rem(20);
+  }
+
+  &__swiper {
+    margin-top: rem(50);
+    position: relative;
+  }
+
+  &__swiper .swiper-slide {
+    background-color: $white;
+    transition-property: opacity, transform;
+  }
+
+  &__swiper-thumbs {
+    margin-top: rem(50);
+    position: relative;
+  }
+
+  &__swiper-thumbs .swiper-slide {
+    cursor: pointer;
+    transition: opacity .3s;
+  }
+
+  .swiper-thumbs-button-next,
+  .swiper-thumbs-button-prev {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 40%;
+    height: 30px;
+    width: 30px;
+    background-color: $color-main;
+    border-radius: 100px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, .7));
+  }
+
+  .swiper-thumbs-button-next,
+  .swiper-thumbs-button-prev {
+    display: none;
+  }
+
+  .swiper-thumbs-button-next {
+    right: rem(10);
+  }
+  
+  .swiper-thumbs-button-prev {
+    left: rem(10);
+  }
+
+  .swiper-slide-thumb-active {
+    opacity: .7;
+  }
+
+  &__button {
+    margin-top: rem(75);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(500);
+  }
+}

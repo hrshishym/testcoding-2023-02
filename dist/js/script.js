@@ -17,13 +17,40 @@ function coloring(el, pos=3) {
   const place = el.innerText.slice((pos-1), pos);
   const after = el.innerText.slice(pos, el.innerText.length);
   el.innerHTML = before + "<span>" + place + "</span>" + after;  
-  console.log("before:" + before);
-  console.log("place:" + place);
-  console.log("after:" + after);
+  // console.log("before:" + before);
+  // console.log("place:" + place);
+  // console.log("after:" + after);
 }
 
 const title = document.querySelectorAll('.c-heading-en');
-console.log(title.innerText);
+// console.log(title.innerText);
 title.forEach(el => {
   coloring(el, 3);
 });
+
+////////////////////////////////////////
+// カルーセルスライダー
+const swiper_thumbs = new Swiper('.swiper-thumbs', {
+  slidesPerView: 4,
+  spaceBetween: 50,
+  watchSlidesProgress: true,
+});
+
+const swiper = new Swiper('.swiper', {
+  // Slides per View
+  slidesPerView: 1,
+  thumbs: {
+    swiper: swiper_thumbs,
+  },
+  effect: 'fade',
+  fadeEffect: {
+    // crossFade: true
+  },
+  speed: 1000,
+  
+  navigation: {
+    nextEl: '.swiper-thumbs-button-next',
+    prevEl: '.swiper-thumbs-button-prev',
+  },
+});
+
