@@ -47,10 +47,6 @@ const swiper = new Swiper('.swiper', {
     // crossFade: true
   },
   speed: 1000,
-  
-  navigation: {
-    nextEl: '.swiper-thumbs-button-next',
-    prevEl: '.swiper-thumbs-button-prev',
-  },
+
 });
 
