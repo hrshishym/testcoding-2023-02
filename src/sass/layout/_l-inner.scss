@@ -16,6 +16,7 @@
 }
 
 .l-inner-sub {
+  position: relative;
   width: 100%;
   padding-right: rem(strip-unit($padding-sp));
   padding-left: rem(strip-unit($padding-sp));
@@ -26,4 +27,10 @@
     padding-right: rem(strip-unit($padding-pc));
     padding-left: rem(strip-unit($padding-pc));
   }
+}
+
+.l-inner-sub > .l-inner {
+  max-width: $innerWidthMain;
+  padding-right: unset;
+  padding-left: unset;
 }

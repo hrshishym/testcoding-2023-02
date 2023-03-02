@@ -1,7 +1,16 @@
 /* 影付きの画像
+
+* HTML
+
+  <div class="c-image-shadow">
+    <img src="https://picsum.photos/800/600/" alt="">
+  </div>
+
 */
 @use "global"as *;
 
 .c-image-shadow {
+  padding-right: rem(47.4);
+  padding-bottom: rem(50);
   filter:drop-shadow(rem(47.4) rem(50) 0 $color-main);
 }

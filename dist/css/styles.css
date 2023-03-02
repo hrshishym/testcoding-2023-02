@@ -143,6 +143,13 @@ button {
     scroll-behavior: auto !important;
   }
 }
+/* レウアウト：コンセプト
+*/
+.l-concept {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 /* レイアウト：お問い合わせ
 */
 .l-contact {
@@ -185,6 +192,7 @@ button {
 }
 
 .l-inner-sub {
+  position: relative;
   width: 100%;
   padding-right: 0.8333333333rem;
   padding-left: 0.8333333333rem;
@@ -197,6 +205,12 @@ button {
     padding-right: 1.0416666667rem;
     padding-left: 1.0416666667rem;
   }
+}
+
+.l-inner-sub > .l-inner {
+  max-width: 1200px;
+  padding-right: unset;
+  padding-left: unset;
 }
 
 /* メインコンテンツエリア
@@ -387,6 +401,11 @@ button {
 }
 
 /* 見出し英語
+
+* HTML
+
+  <div class="c-heading-en">concept</div>
+
 */
 .c-heading-en {
   position: absolute;
@@ -413,8 +432,17 @@ button {
 }
 
 /* 影付きの画像
+
+* HTML
+
+  <div class="c-image-shadow">
+    <img src="https://picsum.photos/800/600/" alt="">
+  </div>
+
 */
 .c-image-shadow {
+  padding-right: 1.975rem;
+  padding-bottom: 2.0833333333rem;
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="0" /><feOffset dx="33" dy="33" result="offsetblur" /><feFlood flood-color="rgba(255,214,0,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
   -webkit-filter: drop-shadow(1.975rem 2.0833333333rem 0 #FFD600);
           filter: drop-shadow(1.975rem 2.0833333333rem 0 #FFD600);
@@ -593,6 +621,39 @@ button {
   color: #fff;
   background-color: #3A3838;
   border-radius: 4.1666666667rem;
+}
+
+/* 
+*/
+.p-concept {
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+  background-image: url(../images/img-concept-bg.png);
+  background-repeat: repeat;
+}
+.p-concept .c-heading-en {
+  left: 100%;
+}
+.p-concept__heading {
+  position: relative;
+}
+.p-concept__message {
+  margin-top: 2.0833333333rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.p-concept__message + .p-concept__message {
+  margin-top: 0.8333333333rem;
+}
+.p-concept__message--large {
+  display: block;
+  font-size: 1.3333333333rem;
+}
+.p-concept__image {
+  margin-left: auto;
+  margin-top: 3.125rem;
+  width: 72%;
 }
 
 /* セクション：お問い合わせ

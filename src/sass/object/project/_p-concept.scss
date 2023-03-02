@@ -1,0 +1,40 @@
+/* 
+*/
+@use "global"as *;
+
+.p-concept {
+  position         : relative;
+  overflow-x: hidden;
+  z-index          : 0;
+  background-image : url(../images/img-concept-bg.png);
+  background-repeat: repeat;
+
+  .c-heading-en {
+    left: 100%;
+  }
+
+  &__heading {
+    position: relative;
+  }
+
+  &__message {
+    margin-top : rem(50);
+    font-size  : rem(24);
+    font-weight: 700;
+  }
+
+  &__message+&__message {
+    margin-top: rem(20);
+  }
+
+  &__message--large {
+    display  : block;
+    font-size: rem(32);
+  }
+
+  &__image {
+    margin-left: auto;
+    margin-top : rem(75);
+    width      : 72%;
+  }
+}
