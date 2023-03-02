@@ -219,6 +219,13 @@ button {
   margin-left: 4.1666666667rem;
 }
 
+/* レイアウト：お知らせ
+*/
+.l-news {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 /* 
 */
 .l-service {
@@ -464,7 +471,7 @@ button {
 
 <div class="c-news">
   <div class="c-news__meta">
-    <span class="c-news__category">お知らせ</span>
+    <span class="c-news__category"><a href="#">お知らせ</a></span>
     <span class="c-news__post">posted on</span>
     <time class="c-news__date" datetime="2023-02-14">2023.02.14</time>
   </div>
@@ -856,6 +863,34 @@ button {
   .p-header__tel span {
     font-size: 1.5rem;
   }
+}
+
+/* セクション：お知らせ
+*/
+.p-news {
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+}
+.p-news__heading-en {
+  left: 100%;
+}
+.p-news__list {
+  margin-top: 2.0833333333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.8333333333rem;
+}
+.p-news__button {
+  margin-top: 3.125rem;
+  max-width: 20.8333333333rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* セクション：サービス

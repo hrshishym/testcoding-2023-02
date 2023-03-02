@@ -1,0 +1,27 @@
+/* セクション：お知らせ
+*/
+@use "global"as *;
+
+.p-news {
+  position         : relative;
+  overflow-x: hidden;
+  z-index          : 0;
+
+  &__heading-en {
+    left: 100%;
+  }
+
+  &__list {
+    margin-top: rem(50);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+  }
+
+  &__button {
+    margin-top: rem(75);
+    max-width: rem(500);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
