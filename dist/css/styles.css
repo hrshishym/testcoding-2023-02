@@ -644,7 +644,7 @@ button {
   background-image: url(../images/img-concept-bg.png);
   background-repeat: repeat;
 }
-.p-concept .c-heading-en {
+.p-concept__heading-en {
   left: 100%;
 }
 .p-concept__message {
@@ -860,6 +860,15 @@ button {
 
 /* セクション：サービス
 */
+.p-service {
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+  background-color: #FFFBE6;
+}
+.p-service .p-service__heading-en {
+  right: 100%;
+}
 .p-service__list {
   margin-top: 2.0833333333rem;
   display: grid;
