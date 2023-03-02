@@ -21,4 +21,10 @@
   & span {
     color: $color-main;
   }
+
+  &--fg {
+    color: #6C6969;
+    opacity: 1;
+    z-index: 1;
+  }
 }

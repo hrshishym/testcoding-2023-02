@@ -1,0 +1,28 @@
+/* セクション：アクセス
+*/
+@use "global"as *;
+
+.p-access {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &__heading-en {
+    top: rem(111);
+    left: 100%;
+  }
+
+  &__map {
+    width: 100%;
+    position: relative;
+    padding-top: 44%;
+    
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
