@@ -44,9 +44,9 @@ const swiper = new Swiper('.swiper', {
   },
   effect: 'fade',
   fadeEffect: {
-    // crossFade: true
+    crossFade: true,
   },
-  speed: 1000,
+  speed: 500,
 
 });
 

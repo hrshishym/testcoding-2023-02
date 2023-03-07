@@ -8,9 +8,9 @@
   overflow-y: hidden;
 
   &__heading-en {
-    top : rem(111);
+    position: absolute;
+    top : 50%;
     left: calc(100% - #{rem(50)});
-    ;
   }
 
   &__map {

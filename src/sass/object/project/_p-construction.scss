@@ -41,6 +41,11 @@
   &__swiper .swiper-slide {
     background-color   : $white;
     transition-property: opacity, transform;
+    z-index: 0;
+  }
+
+  &__swiper .swiper-slide.swiper-slide-active {
+    z-index: 1;
   }
 
   &__swiper-thumbs {

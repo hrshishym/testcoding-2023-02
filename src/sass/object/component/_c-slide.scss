@@ -31,9 +31,18 @@
     padding-bottom: rem(50);
     padding-left: rem(57);
     background-color: rgba($color-main, .7);
+    position: relative;
+    z-index: 1;
+    transition: background-color .3s;
+    
+    &:hover {
+      background-color: rgba($color-main, 1);
+    }
   }
 
+
   &__label {
+    display: inline-block;
     padding: rem(5) rem(25);
     font-size: rem(19.2);
     font-weight: 700;
@@ -67,26 +76,34 @@
 
   &__link {
     margin-top: rem(47);
-    text-align: right;
+    // padding-top: rem(10);
+    // padding-right: rem(32);
+    // padding-bottom: rem(10);
+    // padding-left: rem(20);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: rem(24);
+    text-transform: capitalize;
+    font-family: $font-en;
+    font-size: rem(19.2);
+    font-weight: 700;
 
-    a {
-      padding-top: rem(10);
-      padding-right: rem(32);
-      padding-bottom: rem(10);
-      padding-left: rem(20);
-      text-transform: capitalize;
-      font-family: $font-en;
-      font-size: rem(19.2);
-      font-weight: 700;
-      position: relative;
-    }
-    a::after {
-      position: absolute;
+    &::after {
       content: ">";
       display: block;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
       right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      pointer-events: auto;
+      content: "";
+      background-color: transparent;
     }
   }
 
