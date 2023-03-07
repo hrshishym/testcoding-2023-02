@@ -8,8 +8,9 @@
   z-index   : 0;
 
   &__heading-en {
-    left: calc(100% - #{rem(50)});
-    ;
+    position: absolute;
+    right: max((100% - $innerWidthSub) / 2, 200px);
+    transform: translateX(100%);
   }
 
   &__list {

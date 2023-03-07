@@ -187,7 +187,6 @@ button {
 }
 
 .l-inner-sub {
-  position: relative;
   width: 100%;
   padding-right: 0.8333333333rem;
   padding-left: 0.8333333333rem;
@@ -211,7 +210,7 @@ button {
 /* メインコンテンツエリア
 */
 .l-main {
-  margin-left: 4.1666666667rem;
+  margin-left: 100px;
 }
 
 /* セクション：Main View(MV)
@@ -447,12 +446,15 @@ a:hover .c-circle__content {
   line-height: 1;
 }
 .c-heading-en span {
-  color: #FFD600;
+  color: rgba(255, 214, 0, .25);
 }
 .c-heading-en--fg {
   color: #6C6969;
   opacity: 1;
   z-index: 1;
+}
+.c-heading-en--fg span {
+  color: #FFD600;
 }
 
 /* セクションタイトル
@@ -696,7 +698,9 @@ a:hover .c-circle__content {
 .p-access__heading-en {
   position: absolute;
   top: 50%;
-  left: calc(100% - 2.08333rem);
+  -webkit-transform: translateY(-50%) translateX(100%);
+          transform: translateY(-50%) translateX(100%);
+  right: max((100% - 1400px) / 2, 200px);
 }
 .p-access__map {
   width: 100%;
@@ -721,7 +725,10 @@ a:hover .c-circle__content {
   background-repeat: repeat;
 }
 .p-concept__heading-en {
-  left: calc(100% - 2.08333rem);
+  position: absolute;
+  right: max((100% - 1400px) / 2, 200px);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 .p-concept__message {
   margin-top: 2.0833333333rem;
@@ -762,7 +769,10 @@ a:hover .c-circle__content {
           clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 calc(100% - 10vw));
 }
 .p-construction__heading-en {
-  right: calc(100% - 2.08333rem);
+  position: absolute;
+  left: max((100% - 1400px) / 2, 200px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 .p-construction__tags {
   margin-top: 2.0833333333rem;
@@ -1175,7 +1185,10 @@ a:hover .c-circle__content {
   z-index: 0;
 }
 .p-news__heading-en {
-  left: calc(100% - 2.08333rem);
+  position: absolute;
+  right: max((100% - 1400px) / 2, 200px);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 .p-news__list {
   margin-top: 2.0833333333rem;
@@ -1204,7 +1217,10 @@ a:hover .c-circle__content {
   background-color: #FFFBE6;
 }
 .p-service .p-service__heading-en {
-  right: calc(100% - 2.08333rem);
+  position: absolute;
+  left: max((100% - 1400px) / 2, 200px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 .p-service__list {
   margin-top: 2.0833333333rem;

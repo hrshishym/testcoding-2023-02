@@ -9,8 +9,9 @@
   background-color: $color-service-bg;
 
   .p-service__heading-en {
-    right: calc(100% - #{rem(50)});
-    ;
+    position: absolute;
+    left: max((100% - $innerWidthSub) / 2, 200px);
+    transform: translateX(-100%);
   }
 
   &__list {
