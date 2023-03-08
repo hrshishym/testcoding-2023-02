@@ -16,34 +16,50 @@
 
 .c-button-dogear {
   display: inline-block;
+  position: relative;
   text-transform: capitalize;
   // min-width: 500px;
-  width: 100%;
-  background-color: $black;
-  color: white;
-  font-weight: bold;
   padding: rem(20);
+  width: 100%;
+  font-weight: bold;
+  color: white;
   text-align: center;
   line-height: calc(28 / 24);
-  position: relative;
-  transition: background-color .3s, color .3s;
+  transition: color .3s;
+  overflow: hidden;
 
   &::before {
     display: block;
     content: "";
     position: absolute;
-    width: auto;
-    height: 70%;
-    aspect-ratio: 1 / 1;
-    border-width: rem(16);
-    background-color: $color-main;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    z-index: -2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
     bottom: 0;
     left: 0;
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 0 0);
+    height: auto;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background-color: $color-main;
+    transition: width .3s;
+    z-index: -1;
+    transform: translate(-50%, 50%) rotate(45deg);
   }
 
   &:hover {
-    background-color: $color-main;
     color: $black;
+  }
+
+  &:hover::after {
+    width: 180%;
+    height: auto;
   }
 }
