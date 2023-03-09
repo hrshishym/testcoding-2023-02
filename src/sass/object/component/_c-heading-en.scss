@@ -9,6 +9,8 @@
 
 .c-heading-en {
   position: absolute;
+  left: max((100% - $innerWidthSub) / 2, 200px);
+  transform: translateX(-100%);
   z-index: -1;
   text-transform: uppercase;
   writing-mode: vertical-rl;
@@ -20,6 +22,12 @@
 
   & span {
     color: rgba($color-main, .25);
+  }
+
+  &--right {
+    left: unset;
+    right: max((100% - $innerWidthSub) / 2, 200px);
+    transform: translateX(100%);
   }
 
   &--fg {

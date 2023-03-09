@@ -7,12 +7,6 @@
   overflow-x: hidden;
   z-index   : 0;
 
-  &__heading-en {
-    position: absolute;
-    right: max((100% - $innerWidthSub) / 2, 200px);
-    transform: translateX(100%);
-  }
-
   &__list {
     margin-top    : rem(50);
     display       : flex;

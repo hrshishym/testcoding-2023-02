@@ -158,6 +158,13 @@ button {
   padding-bottom: 5rem;
 }
 
+/* レイアウト：会社概要
+*/
+.l-greeting {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 /* ヘッダーレイアウト
 */
 .l-header {
@@ -459,6 +466,9 @@ a:hover .c-circle__content {
 */
 .c-heading-en {
   position: absolute;
+  left: max((100% - 1400px) / 2, 200px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   z-index: -1;
   text-transform: uppercase;
   -webkit-writing-mode: vertical-rl;
@@ -472,6 +482,12 @@ a:hover .c-circle__content {
 }
 .c-heading-en span {
   color: rgba(255, 214, 0, .25);
+}
+.c-heading-en--right {
+  left: unset;
+  right: max((100% - 1400px) / 2, 200px);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 .c-heading-en--fg {
   color: #6C6969;
@@ -755,6 +771,7 @@ a:hover .c-circle__content {
   -webkit-transform: translateY(-50%) translateX(100%);
           transform: translateY(-50%) translateX(100%);
   right: max((100% - 1400px) / 2, 200px);
+  left: unset;
 }
 .p-access__map {
   width: 100%;
@@ -777,12 +794,6 @@ a:hover .c-circle__content {
   z-index: 0;
   background-image: url(../images/img-concept-bg.png);
   background-repeat: repeat;
-}
-.p-concept__heading-en {
-  position: absolute;
-  right: max((100% - 1400px) / 2, 200px);
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
 }
 .p-concept__message {
   margin-top: 2.0833333333rem;
@@ -821,12 +832,6 @@ a:hover .c-circle__content {
   z-index: -1;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 calc(100% - 10vw));
           clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 calc(100% - 10vw));
-}
-.p-construction__heading-en {
-  position: absolute;
-  left: max((100% - 1400px) / 2, 200px);
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
 }
 .p-construction__tags {
   margin-top: 2.0833333333rem;
@@ -1005,6 +1010,41 @@ a:hover .c-circle__content {
   margin-right: 1.25rem;
   margin-left: 0.9166666667rem;
   font-size: 1.3333333333rem;
+}
+
+/* セクション：ごあいさつ
+*/
+.p-greeting__message p {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.p-greeting__message p:first-of-type {
+  margin-top: 0;
+}
+.p-greeting__sign-wrap {
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.p-greeting__sign {
+  font-family: "Noto Serif JP", serif;
+}
+.p-greeting__sign span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.p-greeting__name {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 /* ヘッダー
@@ -1309,12 +1349,6 @@ a:hover .c-circle__content {
   overflow-x: hidden;
   z-index: 0;
 }
-.p-news__heading-en {
-  position: absolute;
-  right: max((100% - 1400px) / 2, 200px);
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
 .p-news__list {
   margin-top: 2.0833333333rem;
   display: -webkit-box;
@@ -1340,12 +1374,6 @@ a:hover .c-circle__content {
   overflow-x: hidden;
   z-index: 0;
   background-color: #FFFBE6;
-}
-.p-service .p-service__heading-en {
-  position: absolute;
-  left: max((100% - 1400px) / 2, 200px);
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
 }
 .p-service__list {
   margin-top: 2.0833333333rem;

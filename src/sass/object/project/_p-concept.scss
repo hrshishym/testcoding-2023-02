@@ -9,12 +9,6 @@
   background-image : url(../images/img-concept-bg.png);
   background-repeat: repeat;
 
-  &__heading-en {
-    position: absolute;
-    right: max((100% - $innerWidthSub) / 2, 200px);
-    transform: translateX(100%);
-  }
-
   &__message {
     margin-top : rem(50);
     font-size  : rem(24);

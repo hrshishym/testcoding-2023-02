@@ -12,6 +12,7 @@
     top : 50%;
     transform: translateY(-50%) translateX(100%);
     right: max((100% - $innerWidthSub) / 2, 200px);
+    left: unset;
   }
 
   &__map {
