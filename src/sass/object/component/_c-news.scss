@@ -59,6 +59,10 @@
       display: block;
       padding-top: rem(15);
       padding-bottom: rem(15);
+      transition: opacity .3s;
+    }
+    a:hover {
+      opacity: .7;
     }
   }
 }
