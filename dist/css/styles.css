@@ -185,6 +185,13 @@ button {
   padding-bottom: 50px;
 }
 
+/* レウアウト：沿革
+*/
+.l-history {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .l-inner {
   width: 100%;
   padding-right: 0.8333333333rem;
@@ -1251,6 +1258,127 @@ a:hover .c-circle__content {
   .p-header__tel span {
     font-size: 1.5rem;
   }
+}
+
+/* セクション：沿革
+*/
+.p-history .l-inner-sub {
+  position: relative;
+  padding-left: 4.1666666667rem;
+}
+.p-history .l-inner-sub::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: calc(100% + 7.58333rem);
+  top: -5rem;
+  left: 0.25rem;
+  background-color: #FFD600;
+  z-index: 1;
+}
+.p-history__list {
+  margin-top: 2.0833333333rem;
+  margin-right: 4.1666666667rem;
+  position: relative;
+}
+.p-history__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.p-history__item::before {
+  content: "";
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 0.625rem;
+  background-color: #3A3838;
+  top: 0.5rem;
+  left: -4.1666666667rem;
+}
+.p-history__item::after {
+  content: "";
+  position: absolute;
+  width: 3.75rem;
+  height: 1px;
+  background-color: #3A3838;
+  top: 0.75rem;
+  left: -3.75rem;
+}
+.p-history__item--mt20 {
+  margin-top: 0.8333333333rem;
+}
+.p-history__item--mt30 {
+  margin-top: 1.25rem;
+}
+.p-history__item--mt50 {
+  margin-top: 2.0833333333rem;
+}
+.p-history__item--mt70 {
+  margin-top: 2.9166666667rem;
+}
+.p-history__item--mt80 {
+  margin-top: 3.3333333333rem;
+}
+.p-history__item--mt100 {
+  margin-top: 4.1666666667rem;
+}
+.p-history__term {
+  width: 4.375rem;
+}
+.p-history__desc {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.p-history__background {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.p-history__bg1 img {
+  width: 18.5416666667rem;
+  height: auto;
+  aspect-ratio: 445/381;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-history__bg2 img {
+  width: 13.9166666667rem;
+  height: auto;
+  aspect-ratio: 334/223;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-history__bg3 img {
+  width: 9.5rem;
+  height: auto;
+  aspect-ratio: 228/393;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* セクション：Main View(MV)
