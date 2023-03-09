@@ -1,0 +1,28 @@
+/* コンポーネント：ページネーション
+*/
+@use "global"as *;
+
+.c-pagination {
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    padding: rem(15) rem(20);
+    margin-right: rem(30);
+    font-family: $font-en;
+    font-size: rem(24);
+    font-weight: 700;
+    color: $black;
+    background-color: $white;
+    border: 3px solid $black;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__item.c-pagination__currentpage {
+    color: $white;
+    background-color: $black;
+  }
+}

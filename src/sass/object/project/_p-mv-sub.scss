@@ -1,0 +1,61 @@
+/* セクション：Main View(MV)
+*/
+@use "global"as *;
+
+.p-mv-sub {
+  display            : flex;
+  flex-direction     : column;
+  justify-content    : center;
+  align-items        : center;
+  background-image   : linear-gradient(rgba(0, 0, 0, .4) 0%), url(../images/img-mainview-sub-bg.jpg);
+  background-size    : cover;
+  background-position: center;
+
+  &__heading-area {
+    position: relative;
+    padding-bottom: rem(30);
+  }
+
+  &__heading-area::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: rem(100);
+    height: rem(5);
+    background-color: $white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__heading {
+    font-size     : rem(82);
+    font-weight   : 700;
+    color         : $white;
+    text-align    : center;
+    position      : relative;
+    line-height   : calc(119 / 82);
+  }
+
+  &__heading span {
+    color: $color-main;
+  }
+
+  &__heading::after {
+    content         : attr(data-en);
+    position        : relative;
+    display: block;
+    margin-top: rem(10);
+    font-family: $font-en;
+    font-size: rem(48);
+    text-transform: uppercase;
+  }
+
+  &__message {
+    margin-top : rem(70);
+    font-size  : rem(40);
+    font-weight: 700;
+    color      : $white;
+    text-align : center;
+  }
+}

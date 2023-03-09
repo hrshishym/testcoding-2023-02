@@ -28,6 +28,11 @@ title.forEach(el => {
   coloring(el, 3);
 });
 
+const title_sub = document.querySelector('.p-mv-sub .p-mv-sub__heading');
+if(title_sub) {
+  coloring(title_sub, 2);
+}
+
 ////////////////////////////////////////
 // カルーセルスライダー
 const swiper_thumbs = new Swiper('.swiper-thumbs', {

@@ -1,0 +1,9 @@
+/* セクション：お知らせ(下層ページ)
+*/
+@use "global"as *;
+
+.p-news {
+  &__pagination {
+    margin-top: rem(90);
+  }
+}

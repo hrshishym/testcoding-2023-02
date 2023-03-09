@@ -213,6 +213,16 @@ button {
   margin-left: 100px;
 }
 
+/* セクション：下層ページのMain View(MV)
+*/
+.l-mv-sub {
+  min-height: 33.3333333333rem;
+  padding-top: 5rem;
+  padding-right: 2.0833333333rem;
+  padding-bottom: 5rem;
+  padding-left: 2.0833333333rem;
+}
+
 /* セクション：Main View(MV)
 */
 .l-mv {
@@ -563,6 +573,30 @@ a:hover .c-circle__content {
   display: block;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+
+/* コンポーネント：ページネーション
+*/
+.c-pagination {
+  text-align: center;
+}
+.c-pagination__item {
+  display: inline-block;
+  padding: 0.625rem 0.8333333333rem;
+  margin-right: 1.25rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3A3838;
+  background-color: #fff;
+  border: 3px solid #3A3838;
+}
+.c-pagination__item:last-child {
+  margin-right: 0;
+}
+.c-pagination__item.c-pagination__currentpage {
+  color: #fff;
+  background-color: #3A3838;
 }
 
 /* スライド
@@ -1136,6 +1170,71 @@ a:hover .c-circle__content {
 
 /* セクション：Main View(MV)
 */
+.p-mv-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4))), url(../images/img-mainview-sub-bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, .4) 0%), url(../images/img-mainview-sub-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.p-mv-sub__heading-area {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+.p-mv-sub__heading-area::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4.1666666667rem;
+  height: 0.2083333333rem;
+  background-color: #fff;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.p-mv-sub__heading {
+  font-size: 3.4166666667rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  line-height: 1.4512195122;
+}
+.p-mv-sub__heading span {
+  color: #FFD600;
+}
+.p-mv-sub__heading::after {
+  content: attr(data-en);
+  position: relative;
+  display: block;
+  margin-top: 0.4166666667rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.p-mv-sub__message {
+  margin-top: 2.9166666667rem;
+  font-size: 1.6666666667rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+/* セクション：Main View(MV)
+*/
 .p-mv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1190,6 +1289,12 @@ a:hover .c-circle__content {
   font-weight: 700;
   color: #fff;
   text-align: center;
+}
+
+/* セクション：お知らせ(下層ページ)
+*/
+.p-news__pagination {
+  margin-top: 3.75rem;
 }
 
 /* セクション：お知らせ

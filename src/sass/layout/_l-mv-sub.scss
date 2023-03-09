@@ -1,0 +1,11 @@
+/* セクション：下層ページのMain View(MV)
+*/
+@use "global"as *;
+
+.l-mv-sub {
+  min-height: rem(800);
+  padding-top: rem(120);
+  padding-right: rem(50);
+  padding-bottom: rem(120);
+  padding-left: rem(50);
+}
