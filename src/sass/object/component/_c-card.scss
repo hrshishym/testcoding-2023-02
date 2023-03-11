@@ -1,0 +1,64 @@
+/* コンポーネント：カード(施工事例)
+*/
+@use "global"as *;
+
+.c-card {
+  position: relative;
+  overflow: hidden;
+
+  &__category {
+    position: absolute;
+    top: rem(50);
+    left: 0;
+    display: inline-block;
+    padding: rem(5) rem(20) rem(5) rem(25);
+    font-size: rem(19.2);
+    font-weight: 700;
+    background-color: $color-main;
+  }
+
+  &__contents {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba($color-main, .7);
+    transform: translateY(100%);
+    transition: transform .3s;
+    padding: rem(30) rem(30) rem(30) rem(26);
+    pointer-events: auto;
+  }
+
+  &:hover .c-card__contents {
+    transform: translateY(0);
+  }
+
+  &__title {
+    font-size: rem(24);
+    font-weight: 700;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: rem(24);
+    text-transform: capitalize;
+    font-family: $font-en;
+    font-size: rem(19.2);
+    font-weight: 700;
+
+    &::after {
+      content: ">";
+      display: block;
+    }
+  }
+
+  &__image img {
+    aspect-ratio: 550 / 350;
+  }
+}

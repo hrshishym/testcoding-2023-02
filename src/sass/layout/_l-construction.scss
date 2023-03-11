@@ -4,4 +4,8 @@
 
 .l-construction {
   padding-bottom: rem(120);
+
+  &--sub {
+    padding-top: rem(120);
+  }
 }
