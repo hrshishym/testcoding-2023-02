@@ -92,13 +92,13 @@
             下記よりお気軽のお問い合わせください。
           </p>
 
-          <form action="" class="p-contact-sub__form" method="post">
+          <form action="sample.php" class="p-contact-sub__form" method="post">
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="requirements" class="p-contact-sub__title">ご用件</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <select name="requirements" id="requirements" class="p-contact-sub__input p-contact-sub__input--select">
+              <select name="requirements" id="requirements" class="p-contact-sub__input p-contact-sub__input--select" required>
                 <option value="未選択">選択してください</option>
                 <option value="ご用件1">ご用件1</option>
                 <option value="ご用件2">ご用件2</option>
@@ -130,21 +130,21 @@
                 <label for="tel" class="p-contact-sub__title">電話番号</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <input type="tel" name="tel" id="tel" placeholder="012-3456-7890" class="p-contact-sub__input" required>
+              <input type="tel" name="tel" id="tel" placeholder="012-3456-7890" class="p-contact-sub__input" required pattern="0\d{1,4}-?\d{1,4}-?\d{4}">
             </div>
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="email" class="p-contact-sub__title">メールアドレス</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <input type="email" name="email" id="email" placeholder="sample@example.com" class="p-contact-sub__input" required>
+              <input type="email" name="email" id="email" placeholder="sample@example.com" class="p-contact-sub__input" required pattern="[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+">
             </div>
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="requirements" class="p-contact-sub__title">問い合わせ内容</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <textarea name="content" id="content" cols="30" rows="10" class="p-contact-sub__textarea"></textarea>
+              <textarea name="content" id="content" cols="30" rows="10" class="p-contact-sub__textarea" required></textarea>
             </div>
 
             <!-- プライバシーポリシー -->

@@ -1395,7 +1395,7 @@ a:hover .c-circle__content {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: -0.375rem; /*チェック時の位置調整*/
-  left: 0.4166666667rem; /*チェック時の位置調整*/
+  left: 0.25rem; /*チェック時の位置調整*/
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
