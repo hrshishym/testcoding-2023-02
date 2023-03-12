@@ -2,9 +2,19 @@
 // ハンバーガーメニュー
 const ham = document.querySelector(".js-hamburger");
 const nav = document.querySelector(".js-header-nav");
-ham.addEventListener('click', function () {
+const overlay = document.querySelector(".js-header-overlay");
+
+function toggleActive() {
   ham.classList.toggle('active');
   nav.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+ham.addEventListener('click', function () {
+  toggleActive();
+});
+overlay.addEventListener('click', function () {
+  toggleActive();
 });
 
 ////////////////////////////////////////
@@ -62,9 +72,11 @@ let check = document.querySelector("#agree");   // チェックボックス
 let submit = document.querySelector("#submit"); // 送信ボタン
 
 // チェックボックスがクリックされたら何かを実行したい
-check.addEventListener("click", function() {
-  // チェックボックスがチェックされていたら
-  // 送信ボタンの無効化を解除したい
-  submit.disabled = !(check.checked);
-});
+if(check) {
+  check.addEventListener("click", function() {
+    // チェックボックスがチェックされていたら
+    // 送信ボタンの無効化を解除したい
+    submit.disabled = !(check.checked);
+  });
+}
 
