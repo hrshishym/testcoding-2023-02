@@ -3,9 +3,15 @@
 @use "global"as *;
 
 .p-history {
-  & .l-inner-sub {
+  &__wrapper {
+    margin-inline: auto;
+    max-width: 100%;
+    @include mq(md) {
+      max-width: $innerWidthSub + $padding-pc * 2;
+      padding-left: calc(#{rem(100)} + #{$padding-pc});
+    }
     position: relative;
-    padding-left: rem(100);
+    // padding-left: rem(100);
 
     &::before {
       content: "";
@@ -13,14 +19,14 @@
       width: 4px;
       height: calc(100% + rem(120) + rem(62));
       top: rem(-120);
-      left: rem(6);
+      left: calc($padding-pc + 4px);
       background-color: $color-main;
       z-index: 1;
     }
   }
 
   &__list {
-    margin-top: rem(50);
+    margin-top: rem(60);
     margin-right: rem(100);
     position: relative;
   }
@@ -82,17 +88,25 @@
     flex-grow: 1;
   }
 
-  &__background {
+  &__background-wrapper {
     position: absolute;
     top: 0;
     right: min(100px, 100px);
+    right: $padding-pc;
     bottom: 0;
     left: 0;
     z-index: -1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-end;
+  }
+  
+  &__background {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__bg1 img {
