@@ -1,0 +1,47 @@
+/* コンポーネント：サービス説明メディア
+*/
+@use "global"as *;
+
+.c-media {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+
+  &__image {
+    width: calc(800 / 1200 * 100%);
+
+    img {
+      object-fit: cover;
+      aspect-ratio: 800 / 550;
+    }
+  }
+
+  &__content {
+    margin-top: rem(-100);
+    width: calc(1000 / 1200 * 100%);
+    align-self: flex-end;
+    padding: rem(50);
+    background-color: rgba($color-main, .7);
+  }
+  
+  &__text {
+    margin-top: rem(20);
+    font-size: rem(24);
+    font-weight: 700;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+}
+
+.c-media.c-media--reverse {
+  & .c-media__image {
+    align-self: flex-end;
+  }
+
+  & .c-media__content {
+    align-self: flex-start;
+  }
+}

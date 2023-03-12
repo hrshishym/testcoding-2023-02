@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>お問い合わせ - 株式会社ETELLIA工務店</title>
+  <meta name="description" content="ETELLIA工務店へのお問い合わせはこちらから。" />
+  <meta name="keywords" content="" />
+  <meta name=”robots” content=”noindex, nofollow”>
+  <!-- ogp -->
+  <meta property="og:title" content="お問い合わせ - 株式会社ETELLIA工務店" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="ETELLIA工務店へのお問い合わせはこちらから。" />
+  <!-- ファビコン -->
+  <link rel="icon" href="" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./css/font-awesome.all.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="p-header l-header">
+    <!-- ハンバーガーメニュー -->
+    <a class="c-hamburger p-header__hamburger js-hamburger">
+      <span class="c-hamburger__title">menu</span>
+      <div class="c-hamburger__button">
+        <span class="c-hamburger__line"></span>
+        <span class="c-hamburger__line"></span>
+        <span class="c-hamburger__line"></span>
+      </div>
+    </a>
+    <!-- SNSアイコン -->
+    <div class="p-header__sns">
+      <a href="#" class="p-header__icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="p-header__icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="p-header__icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="p-header__icon"><i class="fab fa-youtube"></i></a>
+    </div>
+    <!-- ナビゲーション -->
+    <nav class="p-header__nav js-header-nav">
+      <ul class="p-header__nav-list">
+        <li class="p-header__nav-item"><a href="./">ホーム</a></li>
+        <li class="p-header__nav-item"><a href="about.html">会社概要</a></li>
+        <li class="p-header__nav-item"><a href="service.html">サービスについて</a></li>
+        <li class="p-header__nav-item"><a href="news.html">お知らせ</a></li>
+        <li class="p-header__nav-item"><a href="construction.html">施工事例</a></li>
+        <li class="p-header__nav-item"><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+      <div class="p-header__sns p-header__sns--row">
+        <a href="#" class="p-header__icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="p-header__icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="p-header__icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="p-header__icon"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="p-header__tel"><a href=""><span>tel</span>043-111-1234</a></div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!-- Main View -->
+    <section class="p-mv-sub l-mv-sub">
+      <div class="p-mv-sub__heading-area">
+        <h1 class="p-mv-sub__heading" data-en="contact">お問い合わせ</h1>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="p-contact-sub l-contact-sub">
+      <div class="l-inner-sub">
+        <div class="c-heading-en c-heading-en">contact</div>
+        <div class="l-inner">
+          <!-- セクションタイトル -->
+          <div class="p-contact-sub__heading">
+            <h2 class="c-heading">お問い合わせ</h2>
+          </div>
+
+          <p class="p-contact-sub__message">
+            下記よりお気軽のお問い合わせください。
+          </p>
+
+          <form action="" class="p-contact-sub__form" method="post">
+            <div class="p-contact-sub__item">
+              <div class="p-contact-sub__text">
+                <label for="requirements" class="p-contact-sub__title">ご用件</label>
+                <span class="p-contact-sub__required">必須</span>
+              </div>
+              <select name="requirements" id="requirements" class="p-contact-sub__input p-contact-sub__input--select">
+                <option value="未選択">選択してください</option>
+                <option value="ご用件1">ご用件1</option>
+                <option value="ご用件2">ご用件2</option>
+                <option value="ご用件3">ご用件3</option>
+              </select>
+            </div>
+            <div class="p-contact-sub__item">
+              <div class="p-contact-sub__text">
+                <label for="name" class="p-contact-sub__title">お名前</label>
+                <span class="p-contact-sub__required">必須</span>
+              </div>
+              <input type="text" name="name" id="name" placeholder="山田 太郎" class="p-contact-sub__input" required>
+            </div>
+            <div class="p-contact-sub__item">
+              <div class="p-contact-sub__text">
+                <label for="furigana" class="p-contact-sub__title">フリガナ</label>
+                <span class="p-contact-sub__required">必須</span>
+              </div>
+              <input type="text" name="furigana" id="furigana" placeholder="ヤマダ タロウ" class="p-contact-sub__input" required>
+            </div>
+            <div class="p-contact-sub__item">
+              <div class="p-contact-sub__text">
+                <label for="text" class="p-contact-sub__title">会社名</label>
+              </div>
+              <input type="text" name="company" id="company" placeholder="株式会社ETELLIA工務店" class="p-contact-sub__input" required>
+            </div>
+            <div class="p-contact-sub__item">
+              <div class="p-contact-sub__text">
+                <label for="tel" class="p-contact-sub__title">電話番号</label>
+                <span class="p-contact-sub__required">必須</span>
+              </div>
+              <input type="tel" name="tel" id="tel" placeholder="012-3456-7890" class="p-contact-sub__input" required>
+            </div>
+            <div class="p-contact-sub__item">
+              <div class="p-contact-sub__text">
+                <label for="email" class="p-contact-sub__title">メールアドレス</label>
+                <span class="p-contact-sub__required">必須</span>
+              </div>
+              <input type="email" name="email" id="email" placeholder="sample@example.com" class="p-contact-sub__input" required>
+            </div>
+            <div class="p-contact-sub__item">
+              <div class="p-contact-sub__text">
+                <label for="requirements" class="p-contact-sub__title">問い合わせ内容</label>
+                <span class="p-contact-sub__required">必須</span>
+              </div>
+              <textarea name="content" id="content" cols="30" rows="10" class="p-contact-sub__textarea"></textarea>
+            </div>
+
+            <!-- プライバシーポリシー -->
+            <div class="p-contact-sub__privacy">
+              <input type="checkbox" id="agree" class="p-contact-sub__checkbox">
+              <label for="agree" class="p-contact-sub__checkbox-label">個人情報のお取り扱いにつきまして、当社の <a href="#">プライバシーポリシー</a> に同意します。</label>
+            </div>
+
+            <!-- 送信ボタン -->
+            <div class="p-contact-sub__submit-wrap">
+              <input type="button" value="送信する" id="submit" disabled class="p-contact-sub__submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <div class="p-access" id="access">
+      <div class="p-access__heading-en c-heading-en c-heading-en--fg">access</div>
+      <div class="p-access__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.348209712653!2d140.0482214157987!3d35.64379163963083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022831b5e6a59fd%3A0x423a129c34df6a91!2z5bmV5by144OZ44Kk44OR44O844Kv44Of44OD44OJ44K544Kv44Ko44Ki44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1677738954419!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="l-footer p-footer">
+    <div class="l-inner-sub">
+      <div class="p-footer__content">
+        <div class="p-footer__area1">
+          <h2 class="p-footer__heading">株式会社ETELLIA工務店</h2>
+          <span class="p-footer__zip">&#12306;261-0014</span>
+          <address class="p-footer__address">千葉県千葉市美浜区若葉3-1 幕張ベイパークミッドスクエアタワー25F</address>
+          <div class="p-footer__tel-area">
+            <a href="#" class="p-footer__tel"><span>tel</span>043-111-1234</a>
+            <span class="p-footer__separate">/</span>
+            <a href="#" class="p-footer__tel"><span>fax</span>043-111-1235</a>
+          </div>
+        </div>
+        <div class="p-footer__area2">
+          <small class="p-footer__copy">&copy; 2023 株式会社ETELLIA工務店.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script defer src="./js/swiper-bundle.min.js"></script>
+  <script defer src="./js/script.js"></script>
+</body>
+
+</html>

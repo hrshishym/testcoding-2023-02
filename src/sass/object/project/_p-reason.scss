@@ -1,0 +1,26 @@
+/* セクション：当社が選ばれる理由
+*/
+@use "global"as *;
+
+.p-reason {
+  &__message {
+    margin-top: rem(20);
+    font-size: rem(24);
+    font-weight: 400;
+  }
+
+  &__message:first-of-type {
+    margin-top: rem(50);
+  }
+
+  &__list {
+    margin-top: rem(16);
+    display: flex;
+    flex-direction: row;
+    column-gap: rem(68);
+  }
+
+  &__item {
+    width: calc((100% - #{rem(68)} * 2) / 3);
+  }
+}

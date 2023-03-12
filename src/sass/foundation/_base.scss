@@ -23,6 +23,8 @@ html {
   @media ( min-width: $breakpointFont ) {
     font-size: 150%;
   }
+
+  scroll-behavior: smooth;
 }
 
 // フォント、カラー設定

@@ -17,14 +17,14 @@
   }
 
   &__term {
-    width: 16.5%;
+    width: calc(288 / 1200 * 100%);
     min-width: rem(150);
     padding: rem(25) rem(30);
     border-bottom: dotted 2px $color-main;
   }
   
   &__desc {
-    width: 83.5%;
+    width: calc(912 / 1200 * 100%);
     padding: rem(25) rem(30);
     border-bottom: dotted 2px $color-main;
   }

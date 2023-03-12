@@ -1,0 +1,152 @@
+/* セクション：下層ページ：お問い合わせ
+*/
+@use "global"as *;
+
+.p-contact-sub {
+  &__message {
+    margin-top: rem(44);
+    font-size: rem(24);
+    font-weight: 700;
+  }
+
+  &__form {
+    margin-top: rem(40);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(36);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    width: 25%;
+    padding-right: rem(30);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    padding: rem(9.5) 0;
+    font-size: rem(24);
+    font-weight: 700;
+  }
+
+  &__required {
+    padding: rem(9.5) rem(20);
+    background-color: $color-main;
+    border: 2px solid $black;
+    font-size: rem(20);
+    font-weight: 700;
+  }
+  
+  &__input {
+    padding: rem(6.5) rem(20);
+    border: 3px solid #D9D9D9;
+    border-radius: rem(10);
+    width: calc(100% - #{rem(300)});
+
+    &--select {
+      width: calc((100% - #{rem(300)}) / 2);
+    }
+  }
+
+  &__textarea {
+    padding: rem(7.5) rem(20);
+    border: 3px solid #D9D9D9;
+    border-radius: rem(10);
+    width: calc(100% - #{rem(300)});
+    height: rem(250);
+  }
+
+  // プライバシーポリシー
+  &__privacy {
+    margin-top: rem(4);
+  }
+
+  &__checkbox {
+    appearance: none;
+    cursor: pointer;
+    padding-left: 1.3rem; /*label手前にチェックボックス用の余白を開ける*/
+    vertical-align: middle;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    &::before {
+      background-color: #fff;
+      border-radius: 0%;
+      border: 2px solid $black;
+      width: rem(28); /*チェックボックスの横幅*/
+      height: rem(28); /*チェックボックスの縦幅*/
+      transform: translateY(-50%);
+      top: 0%;
+      left: 0;
+    }
+
+    &::after {
+      border-bottom: 3px solid #666464; /*チェックの太さ*/
+      border-left: 3px solid #666464; /*チェックの太さ*/
+      opacity: 0; /*チェック前は非表示*/
+      height: rem(12); /*チェックの高さ*/
+      width: rem(20); /*チェックの横幅*/
+      transform: rotate(-45deg);
+      top: rem(-9); /*チェック時の位置調整*/
+      left: rem(10); /*チェック時の位置調整*/
+      transition: opacity .3s;
+    }
+
+    &:checked::after {
+      opacity: 1; /*チェック後表示*/
+    }
+  }
+
+  &__checkbox-label a {
+    text-decoration: underline;
+  }
+
+  // 送信するボタン
+  &__submit {
+    width: 100%;
+    padding: rem(15);
+    font-size: rem(24);
+    font-weight: 700;
+    background-color: $color-main;
+    border: 2px solid $black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+  }
+  &__submit:disabled {
+    cursor:not-allowed;
+  }
+
+}
+
+.p-contact-sub__submit-wrap {
+  position: relative;
+}
+.p-contact-sub__submit-wrap:has(.p-contact-sub__submit:disabled)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: rgba($white, .7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+}

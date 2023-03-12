@@ -55,3 +55,16 @@ const swiper = new Swiper('.swiper', {
 
 });
 
+////////////////////////////////////////
+// お問い合わせ
+// プライバシーポリシーに同意しないと送信ボタンが有効にならない
+let check = document.querySelector("#agree");   // チェックボックス
+let submit = document.querySelector("#submit"); // 送信ボタン
+
+// チェックボックスがクリックされたら何かを実行したい
+check.addEventListener("click", function() {
+  // チェックボックスがチェックされていたら
+  // 送信ボタンの無効化を解除したい
+  submit.disabled = !(check.checked);
+});
+
