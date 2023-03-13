@@ -19,7 +19,7 @@
       width: 4px;
       height: calc(100% + rem(120) + rem(62));
       top: rem(-120);
-      left: calc($padding-pc + 4px);
+      left: calc($padding-pc + 6px);
       background-color: $color-main;
       z-index: 1;
     }
