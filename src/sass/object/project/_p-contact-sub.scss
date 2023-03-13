@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
   }
 
   &__text {
@@ -45,22 +46,27 @@
     font-weight: 700;
   }
   
+  &__input-wrap {
+    position: relative;
+    width: calc(100% - #{rem(300)});
+    &:has(.p-contact-sub__input--select) {
+      width: calc((100% - #{rem(300)}) / 2);
+    }
+  }
+
   &__input {
     padding: rem(6.5) rem(20);
     border: 3px solid #D9D9D9;
     border-radius: rem(10);
-    width: calc(100% - #{rem(300)});
-
-    &--select {
-      width: calc((100% - #{rem(300)}) / 2);
-    }
+    width: 100%;
+    position: relative;
   }
 
   &__textarea {
     padding: rem(7.5) rem(20);
     border: 3px solid #D9D9D9;
     border-radius: rem(10);
-    width: calc(100% - #{rem(300)});
+    width: 100%;
     height: rem(250);
   }
 
@@ -127,9 +133,6 @@
     position: relative;
     z-index: 0;
   }
-  &__submit:disabled {
-    cursor:not-allowed;
-  }
 
 }
 
@@ -148,5 +151,21 @@
   right: 0;
   bottom: 0;
   z-index: 1;
+  cursor: not-allowed;
+}
 
+.p-contact-sub__input-wrap:has(input:valid)::after,
+.p-contact-sub__input-wrap:has(textarea:valid)::after,
+.p-contact-sub__input-wrap:has(select:valid)::after {
+  content: "OK";
+  display: block;
+  position: absolute;
+  right: rem(30);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: rem(14);
+  color: $color-accent;
+}
+.p-contact-sub__input-wrap:has(input:optional)::after {
+  display: none;
 }

@@ -98,53 +98,67 @@
                 <label for="requirements" class="p-contact-sub__title">ご用件</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <select name="requirements" id="requirements" class="p-contact-sub__input p-contact-sub__input--select" required>
-                <option value="未選択">選択してください</option>
-                <option value="ご用件1">ご用件1</option>
-                <option value="ご用件2">ご用件2</option>
-                <option value="ご用件3">ご用件3</option>
-              </select>
+              <div class="p-contact-sub__input-wrap">
+                <select name="requirements" id="requirements" class="p-contact-sub__input p-contact-sub__input--select" required>
+                  <option value="">選択してください</option>
+                  <option value="ご用件1">ご用件1</option>
+                  <option value="ご用件2">ご用件2</option>
+                  <option value="ご用件3">ご用件3</option>
+                </select>
+              </div>
             </div>
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="name" class="p-contact-sub__title">お名前</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <input type="text" name="name" id="name" placeholder="山田 太郎" class="p-contact-sub__input" required>
+              <div class="p-contact-sub__input-wrap">
+                <input type="text" name="name" id="name" placeholder="山田 太郎" class="p-contact-sub__input" required>
+              </div>
             </div>
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="furigana" class="p-contact-sub__title">フリガナ</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <input type="text" name="furigana" id="furigana" placeholder="ヤマダ タロウ" class="p-contact-sub__input" required>
+              <div class="p-contact-sub__input-wrap">
+                <input type="text" name="furigana" id="furigana" placeholder="ヤマダ タロウ" class="p-contact-sub__input" required>
+              </div>
             </div>
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="company" class="p-contact-sub__title">会社名</label>
               </div>
-              <input type="text" name="company" id="company" placeholder="株式会社ETELLIA工務店" class="p-contact-sub__input" required>
+              <div class="p-contact-sub__input-wrap">
+                <input type="text" name="company" id="company" placeholder="株式会社ETELLIA工務店" class="p-contact-sub__input">
+              </div>
             </div>
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="tel" class="p-contact-sub__title">電話番号</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <input type="tel" name="tel" id="tel" placeholder="012-3456-7890" class="p-contact-sub__input" required pattern="0\d{1,4}-?\d{1,4}-?\d{4}">
+              <div class="p-contact-sub__input-wrap">
+                <input type="tel" name="tel" id="tel" placeholder="012-3456-7890" class="p-contact-sub__input" required pattern="0\d{1,4}-?\d{1,4}-?\d{4}">
+              </div>
             </div>
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="email" class="p-contact-sub__title">メールアドレス</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <input type="email" name="email" id="email" placeholder="sample@example.com" class="p-contact-sub__input" required pattern="[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+">
+              <div class="p-contact-sub__input-wrap">
+                <input type="email" name="email" id="email" placeholder="sample@example.com" class="p-contact-sub__input" required pattern="[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+">
+              </div>
             </div>
             <div class="p-contact-sub__item">
               <div class="p-contact-sub__text">
                 <label for="requirements" class="p-contact-sub__title">問い合わせ内容</label>
                 <span class="p-contact-sub__required">必須</span>
               </div>
-              <textarea name="content" id="content" cols="30" rows="10" class="p-contact-sub__textarea" required></textarea>
+              <div class="p-contact-sub__input-wrap">
+                <textarea name="content" id="content" cols="30" rows="10" class="p-contact-sub__textarea" required></textarea>
+              </div>
             </div>
 
             <!-- プライバシーポリシー -->
@@ -155,7 +169,7 @@
 
             <!-- 送信ボタン -->
             <div class="p-contact-sub__submit-wrap">
-              <input type="button" value="送信する" id="submit" disabled class="p-contact-sub__submit">
+              <input type="submit" value="送信する" id="submit" disabled class="p-contact-sub__submit">
             </div>
           </form>
         </div>
