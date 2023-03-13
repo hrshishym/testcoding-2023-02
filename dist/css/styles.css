@@ -576,7 +576,7 @@ a:hover .c-circle__content {
 */
 .c-heading-en {
   position: absolute;
-  left: max((100% - 1400px) / 2, 200px);
+  left: max((100% - $innerWidthSub) / 2, 7.0833333333rem);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   z-index: -1;
@@ -595,7 +595,7 @@ a:hover .c-circle__content {
 }
 .c-heading-en--right {
   left: unset;
-  right: max((100% - 1400px) / 2, 200px);
+  right: max((100% - $innerWidthSub) / 2, 7.0833333333rem);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }

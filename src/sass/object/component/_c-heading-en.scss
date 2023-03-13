@@ -9,7 +9,7 @@
 
 .c-heading-en {
   position: absolute;
-  left: max((100% - $innerWidthSub) / 2, 200px);
+  left: max((100% - $innerWidthSub) / 2, #{rem(170)});
   transform: translateX(-100%);
   z-index: -1;
   text-transform: uppercase;
@@ -26,7 +26,7 @@
 
   &--right {
     left: unset;
-    right: max((100% - $innerWidthSub) / 2, 200px);
+    right: max((100% - $innerWidthSub) / 2, #{rem(170)});
     transform: translateX(100%);
   }
 
