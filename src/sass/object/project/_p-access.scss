@@ -11,7 +11,7 @@
     position: absolute;
     top : 50%;
     transform: translateY(-50%) translateX(100%);
-    right: max((100% - $innerWidthSub) / 2, 200px);
+    right: max((100% - #{$innerWidthSub}) / 2, #{rem(170)});
     left: unset;
   }
 
