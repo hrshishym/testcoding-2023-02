@@ -15,8 +15,8 @@ html {
 
   // 768px ~ インナー幅＋余白
   @include mq(md) {
-    // font-size: vw(strip-unit($breakpointFont), 16);
-    font-size: 100%;
+    font-size: vw(strip-unit($breakpointFont), 24);
+    // font-size: 100%;
   }
 
   // インナー幅＋余白 ~

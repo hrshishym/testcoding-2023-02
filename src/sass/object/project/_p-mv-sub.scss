@@ -29,12 +29,16 @@
   }
 
   &__heading {
-    font-size     : rem(82);
+    font-size     : liquid(40, 375, 82, 768);
     font-weight   : 700;
     color         : $white;
     text-align    : center;
     position      : relative;
     line-height   : calc(119 / 82);
+
+    @include mq(md) {
+      font-size: rem(82);
+    }
   }
 
   &__heading span {
@@ -47,8 +51,11 @@
     display: block;
     margin-top: rem(10);
     font-family: $font-en;
-    font-size: rem(48);
+    font-size: liquid(28, 375, 48, 768);
     text-transform: uppercase;
+    @include mq(md) {
+      font-size: rem(48);
+    }
   }
 
   &__message {

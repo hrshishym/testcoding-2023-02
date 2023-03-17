@@ -8,31 +8,53 @@
 
   &__content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: end;
+
+    @include mq(md) {
+      flex-direction: row;
+    }
   }
 
   &__heading {
-    font-size: rem(50);
+    font-size: liquid(24, 375, 50, 768);
     font-weight: 700;
+
+    @include mq(md) {
+      font-size: rem(50);
+    }
   }
 
   &__zip {
     display: block;
     margin-top: rem(30);
-    font-size: rem(24);
+    font-size: liquid(18, 375, 24, 768);
     font-weight: 700;
+
+    @include mq(md) {
+      font-size: rem(24);
+    }
   }
 
   &__address {
-    font-size: rem(28);
+    font-size: liquid(18, 375, 28, 768);
     font-weight: 700;
     font-style: normal;
+
+    @include mq(md) {
+      font-size: rem(28);
+    }
   }
 
   &__tel-area {
     margin-top: rem(10);
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+      display: block;
+    }
   }
 
   &__tel {
@@ -50,8 +72,19 @@
     margin-right: rem(30);
     margin-left: rem(22);
     font-size: rem(32);
+    display: none;
+
+    @include mq(md) {
+      display: inline-block;
+    }
   }
 
+  &__area2 {
+    margin-top: rem(30);
+    @include mq(md) {
+      margin-top: unset;
+    }
+  }
   &__copy {
     font-size: rem(16);
   }

@@ -3,5 +3,9 @@
 @use "global"as *;
 
 .l-main {
-  margin-left: 100px;
+  margin-left: liquid(60, 375, 80, 768);
+
+  @include mq(md) {
+    margin-left: 100px;
+  }
 }

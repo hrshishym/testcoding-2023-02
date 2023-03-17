@@ -30,6 +30,7 @@ $color-reason-card-bg: #F4F3F3;
 
 // ブレイクポイント
 $breakpoints: (
+  ssm: 375,
   sm: 600,
   md: 768,
   lg: 1200,
@@ -39,6 +40,7 @@ $breakpoints: (
 
 // メディアクエリ
 $mediaqueries: (
+  ssm: "screen and (min-width: #{map-get($breakpoints,'ssm')}px)",
   sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
   md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
   lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",

@@ -3,12 +3,18 @@
 @use "global"as *;
 
 .l-header {
-  width: 100px;
+  width: liquid(60, 375, 80, 768);
   height: 100svh;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include mq(md) {
+    width: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }

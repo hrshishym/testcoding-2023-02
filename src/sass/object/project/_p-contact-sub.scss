@@ -24,12 +24,18 @@
   }
 
   &__text {
-    width: 25%;
+    width: 100%;
     padding-right: rem(30);
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: rem(30);
+    
+    @include mq(md) {
+      width: 25%;
+      justify-content: space-between;
+    }
   }
 
   &__title {
@@ -48,10 +54,22 @@
   
   &__input-wrap {
     position: relative;
-    width: calc(100% - #{rem(300)});
+    margin-top: rem(30);
+    // width: calc(100% - #{rem(300)});
+    width: 100%;
     &:has(.p-contact-sub__input--select) {
-      width: calc((100% - #{rem(300)}) / 2);
+      width: 50%;
     }
+    
+    @include mq(md) {
+      margin-top: unset;
+      width: 75%;
+
+      &:has(.p-contact-sub__input--select) {
+        width: calc((100% - #{rem(300)}) / 2);
+      }
+    }
+
   }
 
   &__input {

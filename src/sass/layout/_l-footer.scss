@@ -3,7 +3,11 @@
 @use "global"as *;
 
 .l-footer {
-  margin-left: rem(100);
+  margin-left: liquid(60, 375, 80, 768);
   padding-top: rem(120);
   padding-bottom: rem(120);
+
+  @include mq(md) {
+    margin-left: 100px;
+  }
 }

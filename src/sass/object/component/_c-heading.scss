@@ -3,7 +3,11 @@
 @use "global"as *;
 
 .c-heading {
-  font-size: rem(70);
+  font-size: liquid(40, 375, 50, 768);
   font-weight: 700;
   color: $color-main;
+
+  @include mq(md) {
+    font-size: rem(70);
+  }
 }

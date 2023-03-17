@@ -9,16 +9,20 @@
 
 .c-heading-en {
   position: absolute;
-  left: max((100% - #{$innerWidthSub}) / 2, #{rem(170)});
+  left: max((100% - #{$innerWidthSub}) / 2, 1.1em);
   transform: translateX(-100%);
   z-index: -1;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   font-family: $font-en;
-  font-size: rem(150);
+  font-size: liquid(48, 375, 60, 768);
   font-weight: 700;
   color: $color-heading-en;
   line-height: 1;
+
+  @include mq(md) {
+    font-size: rem(150);
+  }
 
   & span {
     color: rgba($color-main, .25);
@@ -26,7 +30,7 @@
 
   &--right {
     left: unset;
-    right: max((100% - #{$innerWidthSub}) / 2, #{rem(170)});
+    right: max((100% - #{$innerWidthSub}) / 2, 1.1em);
     transform: translateX(100%);
   }
 
