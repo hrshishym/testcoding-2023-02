@@ -1527,7 +1527,9 @@ a:hover .c-circle__content {
   width: 100%;
 }
 .p-contact-sub__input-wrap:has(.p-contact-sub__input--select) {
-  width: 50%;
+  width: max(50%, 200px);
+  color: inherit;
+  font-size: max(1rem, 16px);
 }
 @media screen and (min-width: 768px) {
   .p-contact-sub__input-wrap {
@@ -1544,6 +1546,7 @@ a:hover .c-circle__content {
   border-radius: 0.4166666667rem;
   width: 100%;
   position: relative;
+  font-size: max(1rem, 16px);
 }
 .p-contact-sub__textarea {
   padding: 0.3125rem 0.8333333333rem;
@@ -1551,9 +1554,13 @@ a:hover .c-circle__content {
   border-radius: 0.4166666667rem;
   width: 100%;
   height: 10.4166666667rem;
+  font-size: max(1rem, 16px);
 }
 .p-contact-sub__privacy {
   margin-top: 0.1666666667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .p-contact-sub__checkbox {
   -webkit-appearance: none;
@@ -1575,8 +1582,6 @@ a:hover .c-circle__content {
   border: 2px solid #3A3838;
   width: 1.1666666667rem; /*チェックボックスの横幅*/
   height: 1.1666666667rem; /*チェックボックスの縦幅*/
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   top: 0%;
   left: 0;
 }
