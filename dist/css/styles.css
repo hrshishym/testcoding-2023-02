@@ -18,6 +18,10 @@ html {
     font-size: 150%;
   }
 }
+html.fixed {
+  height: 100%;
+  overflow: hidden;
+}
 
 body {
   font-family: "Noto Sans JP", sans-serif;

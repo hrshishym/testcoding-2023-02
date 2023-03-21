@@ -3,11 +3,13 @@
 const ham = document.querySelector(".js-hamburger");
 const nav = document.querySelector(".js-header-nav");
 const overlay = document.querySelector(".js-header-overlay");
+const html = document.documentElement;
 
 function toggleActive() {
   ham.classList.toggle('active');
   nav.classList.toggle('active');
   overlay.classList.toggle('active');
+  html.classList.toggle('fixed');
 }
 
 ham.addEventListener('click', function () {
@@ -16,6 +18,8 @@ ham.addEventListener('click', function () {
 overlay.addEventListener('click', function () {
   toggleActive();
 });
+
+
 
 ////////////////////////////////////////
 // 見出し英語(3文字目のみ色変更)

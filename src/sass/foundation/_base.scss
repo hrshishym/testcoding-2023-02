@@ -25,6 +25,11 @@ html {
   }
 
   scroll-behavior: smooth;
+
+  &.fixed {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 // フォント、カラー設定
