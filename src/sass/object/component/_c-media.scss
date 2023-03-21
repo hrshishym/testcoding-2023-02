@@ -29,6 +29,7 @@
     align-self: flex-end;
     padding: rem(50);
     background-color: rgba($color-main, .7);
+    z-index: 1;
   }
   
   &__text {

@@ -785,6 +785,7 @@ a:hover .c-circle__content {
       align-self: flex-end;
   padding: 2.0833333333rem;
   background-color: rgba(255, 214, 0, .7);
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .c-media__content {
