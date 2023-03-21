@@ -164,10 +164,20 @@ textarea {
 /* レイアウト：施工事例
 */
 .l-construction {
-  padding-bottom: 5rem;
+  padding-bottom: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-construction {
+    padding-bottom: 5rem;
+  }
 }
 .l-construction--sub {
-  padding-top: 5rem;
+  padding-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-construction--sub {
+    padding-top: 5rem;
+  }
 }
 
 /* レイアウト：下層ページ：お問い合わせ
