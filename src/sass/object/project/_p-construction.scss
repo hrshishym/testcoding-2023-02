@@ -128,15 +128,29 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: rem(100);
-    row-gap: rem(100);
+    column-gap: rem(24);
+    row-gap: rem(40);
+    
+    @include mq(md) {
+      column-gap: rem(100);
+      row-gap: rem(100);
+    }
   }
 
   &__item {
-    width: calc((100% - #{rem(100)}) / 2);
+    width: calc((100% - #{rem(24)}) / 2);
+    // clamp(1rem, -4.00954rem + 21.37405vw, 6.25rem)
+    @include mq(md) {
+      width: calc((100% - #{rem(100)}) / 2);
+    }
+    
   }
 
   &__pagination {
-    margin-top: rem(100);
+    margin-top: rem(50);
+
+    @include mq(md) {
+      margin-top: rem(100);
+    }
   }
 }
