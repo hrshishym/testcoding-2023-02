@@ -2036,7 +2036,7 @@ a:hover .c-circle__content {
   position: fixed;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  height: 100svh;
+  height: 100vh;
   left: 0;
   top: 0;
   background-color: #FFD600;
