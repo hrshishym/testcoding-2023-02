@@ -8,7 +8,10 @@
   position: relative;
 
   &__image {
-    width: calc(800 / 1200 * 100%);
+    width: 95%;
+    @include mq(md) {
+      width: calc(800 / 1200 * 100%);
+    }
 
     img {
       object-fit: cover;
@@ -18,7 +21,11 @@
 
   &__content {
     margin-top: rem(-100);
-    width: calc(1000 / 1200 * 100%);
+    width: 95%;
+    @include mq(md) {
+      width: calc(1000 / 1200 * 100%);
+    }
+    
     align-self: flex-end;
     padding: rem(50);
     background-color: rgba($color-main, .7);

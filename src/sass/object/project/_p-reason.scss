@@ -16,11 +16,21 @@
   &__list {
     margin-top: rem(16);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    row-gap: rem(50);
     column-gap: rem(68);
+
+    @include mq(md) {
+      flex-direction: row;
+    }
+    
   }
 
   &__item {
-    width: calc((100% - #{rem(68)} * 2) / 3);
+    width: 100%;
+
+    @include mq(md) {
+      width: calc((100% - #{rem(68)} * 2) / 3);
+    }
   }
 }

@@ -756,7 +756,12 @@ a:hover .c-circle__content {
   position: relative;
 }
 .c-media__image {
-  width: 66.6666666667%;
+  width: 95%;
+}
+@media screen and (min-width: 768px) {
+  .c-media__image {
+    width: 66.6666666667%;
+  }
 }
 .c-media__image img {
   -o-object-fit: cover;
@@ -765,11 +770,16 @@ a:hover .c-circle__content {
 }
 .c-media__content {
   margin-top: -4.1666666667rem;
-  width: 83.3333333333%;
+  width: 95%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 2.0833333333rem;
   background-color: rgba(255, 214, 0, .7);
+}
+@media screen and (min-width: 768px) {
+  .c-media__content {
+    width: 83.3333333333%;
+  }
 }
 .c-media__text {
   margin-top: 0.8333333333rem;
@@ -938,8 +948,8 @@ a:hover .c-circle__content {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #F4F3F3), to(#F4F3F3));
-  background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #F4F3F3 50%, #F4F3F3 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(55%, transparent), color-stop(55%, #F4F3F3), to(#F4F3F3));
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 55%, #F4F3F3 55%, #F4F3F3 100%);
 }
 .c-reason__label span {
   font-size: 4rem;
@@ -2429,16 +2439,30 @@ a:hover .c-circle__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2.0833333333rem;
   -webkit-column-gap: 2.8333333333rem;
      -moz-column-gap: 2.8333333333rem;
           column-gap: 2.8333333333rem;
 }
+@media screen and (min-width: 768px) {
+  .p-reason__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .p-reason__item {
-  width: calc(33.33333% - 1.88889rem);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-reason__item {
+    width: calc(33.33333% - 1.88889rem);
+  }
 }
 
 /* セクション：サービス
