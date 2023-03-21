@@ -12,18 +12,38 @@
     margin-top    : rem(50);
     display       : flex;
     flex-direction: column;
-    row-gap       : rem(75);
+    row-gap       : rem(10);
+
+    @include mq(md) {
+      row-gap: rem(75);
+    }
   }
 
   &__list-row {
-    display        : flex;
+    display        : contents;
     flex-direction : row;
     justify-content: center;
     column-gap     : rem(75);
+
+    @include mq(md) {
+      display: flex;
+    }
   }
 
   &__item {
-    width: rem(350);
+    width: 60%;
+    min-width: rem(350);
+    
+    @include mq(md) {
+      width: rem(350);
+    }
+  }
+
+  &__item:nth-child(2n) {
+    align-self: flex-end;
+    @include mq(md) {
+      align-self: unset;
+    }
   }
 
   &__button {

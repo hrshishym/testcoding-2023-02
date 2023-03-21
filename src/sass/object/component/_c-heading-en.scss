@@ -9,8 +9,8 @@
 
 .c-heading-en {
   position: absolute;
-  left: max((100% - #{$innerWidthSub}) / 2, 1.1em);
-  transform: translateX(-100%);
+  right: max((100% - #{$innerWidthSub}) / 2, 1.1em);
+  transform: translateX(100%);
   z-index: -1;
   text-transform: uppercase;
   writing-mode: vertical-rl;
@@ -22,7 +22,10 @@
 
   @include mq(md) {
     font-size: rem(150);
-  }
+    right: unset;
+    left: max((100% - #{$innerWidthSub}) / 2, 1.1em);
+    transform: translateX(-100%);
+    }
 
   & span {
     color: rgba($color-main, .25);

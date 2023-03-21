@@ -10,7 +10,13 @@
 @use "global"as *;
 
 .c-image-shadow {
-  padding-right: rem(47.4);
-  padding-bottom: rem(50);
-  filter:drop-shadow(rem(47.4) rem(50) 0 $color-main);
+  padding-right: rem(20);
+  padding-bottom: rem(20);
+  filter:drop-shadow(rem(20) rem(20) 0 $color-main);
+  
+  @include mq(md) {
+    padding-right: rem(47.4);
+    padding-bottom: rem(50);
+    filter:drop-shadow(rem(47.4) rem(50) 0 $color-main);
+  }
 }

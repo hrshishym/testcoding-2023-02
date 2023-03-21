@@ -28,8 +28,13 @@
     display       : flex;
     flex-direction: row;
     flex-wrap     : wrap;
-    column-gap    : rem(20);
-    row-gap       : rem(20);
+    column-gap    : rem(12);
+    row-gap       : rem(16);
+
+    @include mq(md) {
+      row-gap: rem(20);
+      column-gap: rem(20);
+    }
   }
 
   &__swiper {
@@ -48,8 +53,12 @@
   }
 
   &__swiper-thumbs {
-    margin-top: rem(50);
+    margin-top: rem(30);
     position  : relative;
+
+    @include mq(md) {
+      margin-top: rem(50);
+    }
   }
 
   &__swiper-thumbs .swiper-slide {
@@ -99,10 +108,14 @@
   }
 
   &__button {
-    margin-top  : rem(75);
+    margin-top  : rem(45);
     margin-right: auto;
     margin-left : auto;
     max-width   : rem(500);
+
+    @include mq(md) {
+      margin-top: rem(75);
+    }
   }
 
   // 下層ページ

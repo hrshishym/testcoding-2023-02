@@ -13,24 +13,33 @@
 
   &__heading-sub {
     font-family   : $font-en;
-    font-size     : rem(75);
+    font-size     : rem(36);
     font-weight   : 700;
     color         : $color-main;
     text-transform: uppercase;
     text-align    : center;
     line-height   : calc(88 / 75);
+
+    @include mq(md) {
+      font-size: rem(75);
+    }
   }
 
   &__heading {
-    padding-bottom: rem(50);
+    padding-bottom: rem(24);
     font-family   : $font-en;
-    font-size     : rem(160);
+    font-size     : rem(64);
     font-weight   : 700;
     color         : $white;
     text-transform: uppercase;
     text-align    : center;
     position      : relative;
     line-height   : calc(188 / 160);
+
+    @include mq(md) {
+      padding-bottom: rem(50);
+      font-size: rem(160);
+    }
   }
 
   &__heading::after {
@@ -45,9 +54,13 @@
 
   &__message {
     margin-top : rem(70);
-    font-size  : rem(40);
+    font-size  : rem(32);
     font-weight: 700;
     color      : $white;
     text-align : center;
+
+    @include mq(md) {
+      font-size: rem(40);
+    }
   }
 }

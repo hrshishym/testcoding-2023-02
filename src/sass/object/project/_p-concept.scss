@@ -28,6 +28,10 @@
   &__image {
     margin-left: auto;
     margin-top : rem(75);
-    width      : 72%;
+    width      : 100%;
+
+    @include mq(md) {
+      width: 72%;
+    }
   }
 }

@@ -22,7 +22,11 @@
   &__map {
     width      : 100%;
     position   : relative;
-    padding-top: 44%;
+    padding-top: 80%;
+
+    @include mq(md) {
+      padding-top: 44%;
+    }
 
     iframe {
       position: absolute;

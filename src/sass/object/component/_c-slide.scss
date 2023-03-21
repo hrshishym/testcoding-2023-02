@@ -19,21 +19,35 @@
 
 .c-slide {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   position: relative;
-  align-items: end;
+  align-items: center;
+  
+  @include mq(md) {
+    flex-direction: row-reverse;
+    align-items: end;
+  }
 
   &__content {
-    width: 50%;
+    margin-top: rem(-40);
+    width: 100%;
     padding-top: rem(127);
     padding-top: clamp(#{rem(32)}, #{rem(-67.67)} + 12.97814vw, #{rem(127)}); // From 32px@768px To 127@1500px
-    padding-right: rem(50);
-    padding-bottom: rem(50);
-    padding-left: rem(57);
+    padding-right: rem(28);
+    padding-bottom: rem(28);
+    padding-left: rem(28);
     background-color: rgba($color-main, .7);
     position: relative;
     z-index: 1;
     transition: background-color .3s;
+
+    @include mq(md) {
+      margin-top: unset;
+      width: 50%;
+      padding-right: rem(50);
+      padding-bottom: rem(50);
+      padding-left: rem(57);
+      }
     
     &:hover {
       background-color: rgba($color-main, 1);
@@ -108,12 +122,16 @@
   }
 
   &__image {
-    width: 66.666%;
-    margin-right: -16.666%;
+    width: 100%;
 
     img {
       object-fit: cover;
       aspect-ratio: 800 / 500;
+    }
+
+    @include mq(md) {
+      width: 66.666%;
+      margin-right: -16.666%;
     }
   }
 }

@@ -47,8 +47,13 @@ if(title_sub) {
 // カルーセルスライダー
 const swiper_thumbs = new Swiper('.swiper-thumbs', {
   slidesPerView: 4,
-  spaceBetween: 50,
+  spaceBetween: 8,
   watchSlidesProgress: true,
+  breakpoints: {
+    768: {
+      spaceBetween: 50,
+    }
+  }
 });
 
 const swiper = new Swiper('.swiper', {

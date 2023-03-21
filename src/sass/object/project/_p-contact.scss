@@ -8,10 +8,14 @@
   background-position: center;
 
   &__heading {
-    font-size: rem(70);
+    font-size: rem(36);
     font-weight: 700;
     color: $white;
     text-align: center;
+
+    @include mq(md) {
+      font-size: rem(70);
+    }
   }
 
   &__message {
@@ -25,7 +29,12 @@
   &__buttons {
     margin-top: rem(50);
     display: flex;
-    flex-direction: row;
-    column-gap: rem(100);
+    flex-direction: column;
+    row-gap: rem(36);
+    column-gap: liquid(28, 768, 100, 1500);
+    
+    @include mq(md) {
+      flex-direction: row;
+    }
   }
 }
