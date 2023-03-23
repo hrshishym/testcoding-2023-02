@@ -442,8 +442,49 @@ textarea {
   position: relative;
   overflow: hidden;
 }
+.c-card a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+@media screen and (min-width: 768px) {
+  .c-card a {
+    display: unset;
+  }
+}
+.c-card__main {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #FFD600;
+  padding-top: 0.3333333333rem;
+  padding-bottom: 0.3333333333rem;
+}
+@media screen and (min-width: 768px) {
+  .c-card__main {
+    display: block;
+    background-color: unset;
+  }
+}
 .c-card__category {
-  position: absolute;
   top: 2.0833333333rem;
   left: 0;
   display: inline-block;
@@ -452,33 +493,48 @@ textarea {
   font-weight: 700;
   background-color: #FFD600;
 }
+@media screen and (min-width: 768px) {
+  .c-card__category {
+    position: absolute;
+  }
+}
 .c-card__contents {
-  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  row-gap: 0.3333333333rem;
   background-color: rgba(255, 214, 0, .7);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
-  padding: 1.25rem 1.25rem 1.25rem 1.0833333333rem;
+  padding: 0.3333333333rem 0.8333333333rem 0 1.0416666667rem;
   pointer-events: auto;
+}
+@media screen and (min-width: 768px) {
+  .c-card__contents {
+    position: absolute;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    padding: 1.25rem 1.25rem 1.25rem 1.0833333333rem;
+  }
 }
 .c-card:hover .c-card__contents {
   -webkit-transform: translateY(0);
@@ -510,8 +566,25 @@ textarea {
   content: ">";
   display: block;
 }
+.c-card__image {
+  width: 30%;
+}
+@media screen and (min-width: 768px) {
+  .c-card__image {
+    width: unset;
+  }
+}
 .c-card__image img {
-  aspect-ratio: 550/350;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .c-card__image img {
+    height: auto;
+    aspect-ratio: 550/350;
+  }
 }
 
 /* サービスの丸
@@ -1511,10 +1584,10 @@ a:hover .c-circle__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-column-gap: 1rem;
@@ -1524,14 +1597,15 @@ a:hover .c-circle__content {
 }
 @media screen and (min-width: 768px) {
   .p-construction__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-column-gap: 4.1666666667rem;
        -moz-column-gap: 4.1666666667rem;
             column-gap: 4.1666666667rem;
     row-gap: 4.1666666667rem;
   }
-}
-.p-construction__item {
-  width: calc(50% - 0.5rem);
 }
 @media screen and (min-width: 768px) {
   .p-construction__item {

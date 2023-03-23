@@ -90,27 +90,31 @@ const clearCategory = () => {
   });
 };
 
-catlist.forEach((el) => {
-  const pageNum = el.attributes.data.value;
-  el.addEventListener('click', () => {
-    clearCategory();
-    swiper_construction.slideTo(pageNum - 1);
-    catlist[pageNum - 1].classList.add('is-active');
+if(catlist) {
+  catlist.forEach((el) => {
+    const pageNum = el.attributes.data.value;
+    el.addEventListener('click', () => {
+      clearCategory();
+      swiper_construction.slideTo(pageNum - 1);
+      catlist[pageNum - 1].classList.add('is-active');
+    });
   });
-});
+}
 
 ////////////////////////////////////////
 // 施工事例 (タグ)
 const tagList = document.querySelectorAll('.c-tag');
 const tagClear = document.querySelector('.c-tag--clear');
 
-tagList.forEach((el) => {
-  el.addEventListener('click', (e) => {
-    e.preventDefault();
-    el.classList.add('c-tag--selected');
-    tagClear.style.display = 'inline-block';
+if(tagList) {
+  tagList.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      el.classList.add('c-tag--selected');
+      tagClear.style.display = 'inline-block';
+    });
   });
-});
+}
 
 // Clearボタン押下時はすべてのタグからselectedを除去、Clearボタンを非表示
 const clearTag = () => {
@@ -119,9 +123,11 @@ const clearTag = () => {
   });
   tagClear.style.display = 'none';
 };
-tagClear.addEventListener('click', () => {
-  clearTag();
-});
+if(tagClear) {
+  tagClear.addEventListener('click', () => {
+    clearTag();
+  });
+}
 
 ////////////////////////////////////////
 // お問い合わせ
