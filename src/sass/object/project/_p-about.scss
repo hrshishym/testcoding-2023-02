@@ -14,19 +14,33 @@
     flex-wrap: wrap;
     font-size: rem(24);
     font-weight: 700;
+
+    @include mq(md) {
+      display: flex;
+    }
   }
 
   &__term {
-    width: calc(288 / 1200 * 100%);
-    min-width: rem(150);
-    padding: rem(25) rem(30);
+    width: max(#{rem(130)}, 24%);
+    // min-width: rem(150);
+    padding: rem(25) rem(16);
     border-bottom: dotted 2px $color-main;
+    
+    @include mq(md) {
+      width: 24%;
+      padding: rem(25) rem(30);
+    }
   }
   
   &__desc {
-    width: calc(912 / 1200 * 100%);
-    padding: rem(25) rem(30);
+    width: 70%;
+    flex-grow: 1;
+    padding: rem(25) rem(16);
     border-bottom: dotted 2px $color-main;
+    
+    @include mq(md) {
+      padding: rem(25) rem(30);
+    }
   }
 
 }

@@ -17,3 +17,19 @@
   color: $black;
   background-color: $color-main;
 }
+
+.c-tag--clear {
+  background-color: #DFDFDF;
+  color: $black;
+  display: none;
+
+  &::before {
+    content: "x";
+    margin-right: rem(8);
+  }
+}
+
+.c-tag.c-tag--selected {
+  color: $black;
+  background-color: $color-main;
+}

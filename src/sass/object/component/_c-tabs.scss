@@ -17,26 +17,27 @@
     font-size: rem(19.2);
     font-weight: 700;
     text-align: center;
+    line-height: calc(50 / 19.2);
+    transition: color .3s;
+    white-space: nowrap;
+    cursor: pointer;
 
     @include mq(md) {
         width: 100%;
     }
     
 
-    a {
-      display: inline-block;
-      width: 100%;
-      line-height: calc(50 / 19.2);
-      transition: color .3s;
-      white-space: nowrap;
+    // a {
+    //   display: inline-block;
+    //   width: 100%;
 
-      @include mq(md) {
-        width: inherit;
-      }
+    //   @include mq(md) {
+    //     width: inherit;
+    //   }
       
-    }
+    // }
 
-    a:hover {
+    &:hover {
       color: $color-main;
     }
   }

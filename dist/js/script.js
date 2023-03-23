@@ -20,7 +20,6 @@ overlay.addEventListener('click', function () {
 });
 
 
-
 ////////////////////////////////////////
 // 見出し英語(3文字目のみ色変更)
 function coloring(el, pos=3) {
@@ -49,7 +48,7 @@ if(title_sub) {
 
 ////////////////////////////////////////
 // カルーセルスライダー
-const swiper_thumbs = new Swiper('.swiper-thumbs', {
+const swiper_thumbs = new Swiper('#js-slide-top-thumbs', {
   slidesPerView: 4,
   spaceBetween: 8,
   watchSlidesProgress: true,
@@ -60,7 +59,7 @@ const swiper_thumbs = new Swiper('.swiper-thumbs', {
   }
 });
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('#js-slide-top', {
   // Slides per View
   slidesPerView: 1,
   thumbs: {
@@ -72,6 +71,56 @@ const swiper = new Swiper('.swiper', {
   },
   speed: 500,
 
+});
+
+////////////////////////////////////////
+// 施工事例 (スライド)
+const swiper_construction = new Swiper('#js-swiper-construction', {
+  allowTouchMove: false,
+  slidesPerView: 1,
+  effect: 'slide',
+  speed: 0,
+  autoHeight: true,
+});
+
+const catlist = document.querySelectorAll('.c-tabs__item');
+const clearCategory = () => {
+  catlist.forEach((el) => {
+    el.classList.remove('is-active');
+  });
+};
+
+catlist.forEach((el) => {
+  const pageNum = el.attributes.data.value;
+  el.addEventListener('click', () => {
+    clearCategory();
+    swiper_construction.slideTo(pageNum - 1);
+    catlist[pageNum - 1].classList.add('is-active');
+  });
+});
+
+////////////////////////////////////////
+// 施工事例 (タグ)
+const tagList = document.querySelectorAll('.c-tag');
+const tagClear = document.querySelector('.c-tag--clear');
+
+tagList.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    el.classList.add('c-tag--selected');
+    tagClear.style.display = 'inline-block';
+  });
+});
+
+// Clearボタン押下時はすべてのタグからselectedを除去、Clearボタンを非表示
+const clearTag = () => {
+  tagList.forEach((el) => {
+    el.classList.remove('c-tag--selected');
+  });
+  tagClear.style.display = 'none';
+};
+tagClear.addEventListener('click', () => {
+  clearTag();
 });
 
 ////////////////////////////////////////

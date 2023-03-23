@@ -3,6 +3,7 @@
 @use "global"as *;
 
 .p-greeting {
+  position: relative;
 
   &__message p {
     margin-top: rem(20);
