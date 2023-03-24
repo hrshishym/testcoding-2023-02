@@ -28,6 +28,8 @@
     @include mq(md) {
       display: block;
       background-color: unset;
+      padding-top: unset;
+      padding-bottom: unset;
     }
   }
 

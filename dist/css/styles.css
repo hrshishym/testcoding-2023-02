@@ -482,6 +482,8 @@ textarea {
   .c-card__main {
     display: block;
     background-color: unset;
+    padding-top: unset;
+    padding-bottom: unset;
   }
 }
 .c-card__category {

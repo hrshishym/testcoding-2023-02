@@ -79,6 +79,9 @@ const swiper_construction = new Swiper('#js-swiper-construction', {
   allowTouchMove: false,
   slidesPerView: 1,
   effect: 'slide',
+  fadeEffect: {
+    crossFade: true,
+  },
   speed: 0,
   autoHeight: true,
 });
@@ -96,8 +99,8 @@ if(catlist) {
     const pageNum = [].slice.call(catlist).indexOf(el);
     el.addEventListener('click', () => {
       clearCategory();
-      swiper_construction.slideTo(pageNum - 1);
-      catlist[pageNum - 1].classList.add('is-active');
+      swiper_construction.slideTo(pageNum, 500);
+      catlist[pageNum].classList.add('is-active');
     });
   });
 }
