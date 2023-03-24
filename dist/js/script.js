@@ -92,7 +92,8 @@ const clearCategory = () => {
 
 if(catlist) {
   catlist.forEach((el) => {
-    const pageNum = el.attributes.data.value;
+    // const pageNum = el.attributes.data.value;
+    const pageNum = [].slice.call(catlist).indexOf(el);
     el.addEventListener('click', () => {
       clearCategory();
       swiper_construction.slideTo(pageNum - 1);

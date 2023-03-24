@@ -12,10 +12,15 @@
     top : 50%;
     transform: translateY(-50%) translateX(100%);
     right: 1.1em;
+    right: max((100% - #{$innerWidthSub}) / 2, 1.1em);
     left: unset;
 
     &.c-heading-en {
       font-size: liquid(24, 375, 60, 768);
+
+      @include mq(md) {
+        font-size: rem(150);
+      }
     }
   }
 

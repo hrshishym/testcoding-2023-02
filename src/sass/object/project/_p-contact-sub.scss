@@ -35,6 +35,7 @@
     @include mq(md) {
       width: 25%;
       justify-content: space-between;
+      column-gap: unset;
     }
   }
 
@@ -42,6 +43,7 @@
     padding: rem(9.5) 0;
     font-size: rem(24);
     font-weight: 700;
+    white-space: nowrap;
   }
 
   &__required {
@@ -50,6 +52,7 @@
     border: 2px solid $black;
     font-size: rem(20);
     font-weight: 700;
+    white-space: nowrap;
   }
   
   &__input-wrap {
@@ -130,7 +133,7 @@
       height: rem(12); /*チェックの高さ*/
       width: rem(20); /*チェックの横幅*/
       transform: rotate(-45deg);
-      top: rem(-9); /*チェック時の位置調整*/
+      top: rem(6); /*チェック時の位置調整*/
       left: rem(6); /*チェック時の位置調整*/
       transition: opacity .3s;
     }
